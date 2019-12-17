@@ -1,1 +1,1 @@
-to test this run comman "yarn install" in terminal
+to test this run command "yarn install" in terminal
