@@ -1,1 +1,0 @@
-yarn install to run this app
