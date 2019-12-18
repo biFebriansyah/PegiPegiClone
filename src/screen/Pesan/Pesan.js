@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { Header } from 'native-base';
 import Color from '../../global/style/Color';
-
 
 export class Pesan extends Component {
 
