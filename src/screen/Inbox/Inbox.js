@@ -40,9 +40,6 @@ export class Inbox extends Component {
                         <SliderBox
                             images={this.state.images}
                             dotColor="#000"
-                            ImageComponent ={
-                                <Image  />
-                            }
                             onCurrentImagePressed={index =>
                                 console.warn(`image ${index} pressed`)
                             }

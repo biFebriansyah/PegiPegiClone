@@ -9,7 +9,7 @@ class Home extends Component {
         return (
             <>
                 <StatusBar backgroundColor={Color.primary} />
-                <Header androidStatusBarColor={Color.primary} style={{ backgroundColor: Color.acent, alignItems: 'center', justifyContent: 'flex-start' }}>
+                <Header androidStatusBarColor={Color.primary} style={{ backgroundColor: Color.acent, alignItems: 'center', justifyContent: 'space-between' }}>
                     <View style={{ width: 120, height: 44 }}>
                         <Image source={require('../../global/asset/logo.png')} style={{ width: '100%', height: '100%', resizeMode: 'contain', flex: 1 }} />
                     </View>

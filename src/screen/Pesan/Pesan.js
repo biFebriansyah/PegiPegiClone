@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 
+
 export class Pesan extends Component {
 
     render() {
