@@ -17,7 +17,6 @@ export class Pesan extends Component {
                     <Text style={{ fontFamily: 'Roboto', fontSize: 13, fontWeight: '600', paddingVertical: 2, }}>Temukan inspirasi Liburan mancanegara</Text>
                 </View>
                 <ScrollView horizontal>
-
                     <View style={{ flexDirection: "row", backgroundColor: "white", paddingHorizontal: 16, }}>
                         <View style={{ marginRight:8, width: 165, height: 113, marginTop: 8, borderRadius: 10, position: "relative" }}>
                             <View style={{width: "100%", height: "100%", position: "absolute", flex: 1, zIndex: 2, justifyContent: "center", alignItems: "center" }}>
@@ -59,7 +58,7 @@ export class Pesan extends Component {
                 <ScrollView horizontal>
 
                     <View style={{ flexDirection: "row", backgroundColor: "white", paddingHorizontal: 16, }}>
-                        <View style={{ marginRight:8, width: 200, height: 250, marginTop: 8, borderRadius: 10, position: "relative" }}>
+                        <View style={{ marginRight:8, width: 250, height: 260, marginTop: 8, borderRadius: 10, position: "relative" }}>
                             <View style={{width: "100%", height: "100%", position: "absolute", flex: 1, zIndex: 2, justifyContent: "center", alignItems: "center" }}>
                                 <Text style={{ color: "white", fontSize: 24 }} >Jepang</Text>
                             </View>
