@@ -5,6 +5,7 @@ export class test extends Component {
     render() {
         return (
             <View style={{ width: 165, height: 116, borderRadius: 10 }}>
+                <Text>halo</Text>
                 <Image source={require('./src/global/asset/hero1.jpg')} style={{ width: null, height: null, resizeMode: 'cover', flex: 1 }} />
             </View>
         )

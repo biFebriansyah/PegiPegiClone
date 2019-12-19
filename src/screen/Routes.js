@@ -3,12 +3,14 @@ import { createAppContainer } from 'react-navigation';
 
 import TiketPlan from './TiketPlan/TiketPlan';
 import AppNavigator from '../components/Navigator/AppNavigator';
+import Splash from '../screen/splash/Splash';
 
 const stack = createStackNavigator({
     tiket: { screen: TiketPlan },
-    navi: { screen: AppNavigator }
+    navi: { screen: AppNavigator },
+    splash: {screen: Splash}
 }, {
-    initialRouteName: 'navi',
+    initialRouteName: 'splash',
     headerMode: "none"
 })
 

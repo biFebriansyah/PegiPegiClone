@@ -4,6 +4,7 @@ import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 import IconMaterial from 'react-native-vector-icons/MaterialIcons';
 
+
 import Terbang from '../../components/TerbangKeluarNegri/Terbang';
 import IconHero from '../../components/IconHero/IconHero';
 import ContentPromo from '../../components/ContentPromo/ContentPromo';
@@ -64,5 +65,8 @@ const style = StyleSheet.create({
         marginTop: 10,
     }
 })
+
+
+
 
 export default Home

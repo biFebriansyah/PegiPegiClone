@@ -5,7 +5,6 @@ import IconMaterial from 'react-native-vector-icons/MaterialIcons';
 import React from 'react';
 import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 
-
 import Home from '../../screen/Home/Home';
 import Pesan from '../../screen/Pesan/Pesan';
 import Inbox from '../../screen/Inbox/Inbox';
@@ -63,7 +62,6 @@ const Navigator = createMaterialTopTabNavigator({
             margin: 0
         },
         tabStyle: {
-            width: 100,
             margin: 0
         },
 
