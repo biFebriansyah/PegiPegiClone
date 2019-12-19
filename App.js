@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
-// import Routes from './src/screen/Routes';
-
-import Register from './src/components/Register/Register';
+import Routes from './src/screen/Routes';
 
 class App extends Component {
   render() {
-    return <Register />;
+    return <Routes />;
   }
 }
 
