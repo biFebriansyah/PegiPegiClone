@@ -3,12 +3,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 import IconAnt from 'react-native-vector-icons/AntDesign';
-<<<<<<< HEAD
-// import TicketCard from '../../components/TicketCard/TicketCard'
-import TiketCard from '../../components/TiketCard/TiketCard'
-=======
 import TicketCard from '../../components/TiketCard/TiketCard';
->>>>>>> 48847a7e1648fbe503560ec053f1ce5f1c4f531c
 
 
 export class TiketPlan extends Component {
@@ -36,13 +31,8 @@ export class TiketPlan extends Component {
           </Text>
         </Header>
 
-<<<<<<< HEAD
-        <View style={{flex: 1}}>
-            <TiketCard />
-=======
         <View style={{ flex: 1 }}>
           <TicketCard />
->>>>>>> 48847a7e1648fbe503560ec053f1ce5f1c4f531c
         </View>
       </>
     );
