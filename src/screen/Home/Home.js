@@ -27,7 +27,7 @@ class Home extends Component {
                     <View style={{ width: 120, height: 44 }}>
                         <Image source={require('../../global/asset/logo.png')} style={{ width: '100%', height: '100%', resizeMode: 'contain', flex: 1 }} />
                     </View>
-                    <IconMaterial name='person' size={24} color={Color.primary} />
+                    <IconMaterial name='person-outline' size={24} color={Color.primary} onPress={() => this.props.navigation.navigate('login')} />
                 </Header>
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={{ flex: 1 }}>
