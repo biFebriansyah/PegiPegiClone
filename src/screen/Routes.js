@@ -5,11 +5,19 @@ import TiketPlan from './TiketPlan/TiketPlan';
 import AppNavigator from '../components/Navigator/AppNavigator';
 
 const stack = createStackNavigator({
-    tiket: { screen: TiketPlan },
-    navi: { screen: AppNavigator }
+    tiket: {
+        screen: TiketPlan,
+
+    },
+    navi: {
+        screen: AppNavigator,
+        navigationOptions: {
+            header: null
+        }
+    }
 }, {
     initialRouteName: 'navi',
-    headerMode: "none"
+    headerMode: 'none'
 })
 
 const Routes = createAppContainer(stack)
