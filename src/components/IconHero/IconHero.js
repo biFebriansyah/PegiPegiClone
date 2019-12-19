@@ -6,7 +6,7 @@ class IconHero extends Component {
     render() {
         return (
             <View style={{ width: '100%', backgroundColor: '#bbb', height: 214 }}>
-                <ImageBackground source={require('../../global/asset/hero1-edited.jpg')} style={{ width: '100%', height: '100%', resizeMode: 'cover', }}>
+                <ImageBackground source={require('../../../Global/asset/Image/hero1-edited.jpg')} style={{ width: '100%', height: '100%', resizeMode: 'cover', }}>
                     <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20 }}>
                         <View style={{ alignItems: 'center', justifyContent: 'center', }} >
                             <View style={{ backgroundColor: Color.lightAcent, width: 70, height: 70, borderRadius: 50, justifyContent: 'center', alignItems: 'center' }}>
