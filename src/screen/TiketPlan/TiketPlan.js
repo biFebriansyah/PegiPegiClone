@@ -3,7 +3,8 @@ import {Text, View, StyleSheet} from 'react-native';
 import {Header} from 'native-base';
 import Color from '../../global/style/Color';
 import IconAnt from 'react-native-vector-icons/AntDesign';
-import TicketCard from '../../components/TicketCard/TicketCard'
+// import TicketCard from '../../components/TicketCard/TicketCard'
+import TiketCard from '../../components/TiketCard/TiketCard'
 
 
 export class TiketPlan extends Component {
@@ -49,7 +50,7 @@ export class TiketPlan extends Component {
         </Header>
 
         <View style={{flex: 1}}>
-            <TicketCard />
+            <TiketCard />
         </View>
       </>
     );
