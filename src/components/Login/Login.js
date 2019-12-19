@@ -42,7 +42,7 @@ export class Login extends Component {
 
             <Item floatingLabel>
               <Label style={{color: this.state.firstColor}}>Password</Label>
-              <Input />
+              <Input onPress={this.changeColor} />
             </Item>
 
             <TouchableOpacity>
