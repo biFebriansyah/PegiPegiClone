@@ -4,21 +4,19 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import TiketPlan from './TiketPlan/TiketPlan';
 import AppNavigator from '../components/Navigator/AppNavigator';
 import Login from '../components/Login/Login';
-import Splash from '../components/Splash/Splash';
+import SplashNavigator from '../components/Splash/Splash';
 import Dtpemesan from '../components/Data Pemesan/Dtpemesan';
-const stack = createStackNavigator({
+
+const stackApp = createStackNavigator({
 
     tiket: {
         screen: TiketPlan,
     },
     dtpemesan: {
         screen: Dtpemesan
-        },
+    },
     login: {
         screen: Login
-    },
-    pesawat: {
-        screen: Pesawat
     },
     navi: {
         screen: AppNavigator,

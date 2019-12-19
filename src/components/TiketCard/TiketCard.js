@@ -9,7 +9,7 @@ export class TiketCard extends Component {
     render() {
         const theWidth = Dimensions.get('window').width - 10
         const shadowOpt = {
-            width: 380, height: 151, color: '#333', border: 2, radius: 5, opacity: 0.2, x: 0, y: 5,
+            width: theWidth, height: 151, color: '#333', border: 2, radius: 5, opacity: 0.2, x: 0, y: 5,
             style: { marginVertical: 5, marginHorizontal: 6, flex: 1 },
         };
 
