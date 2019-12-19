@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import AppNavigator from './src/screen/AppNavigator';
+import Routes from './src/screen/Routes';
 
 class App extends Component {
 
   render() {
     return (
-      <AppNavigator />
+      <Routes />
     );
   }
 };

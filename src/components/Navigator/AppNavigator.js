@@ -3,14 +3,13 @@ import IconIon from 'react-native-vector-icons/Ionicons';
 import IconAnt from 'react-native-vector-icons/AntDesign';
 import IconMaterial from 'react-native-vector-icons/MaterialIcons';
 import React from 'react';
-import { Text } from 'react-native'
 import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 
 
-import Home from './Home/Home';
-import Pesan from './Pesan/Pesan';
-import Inbox from './Inbox/Inbox';
-import Profile from './Profile/Profile';
+import Home from '../../screen/Home/Home';
+import Pesan from '../../screen/Pesan/Pesan';
+import Inbox from '../../screen/Inbox/Inbox';
+import Profile from '../../screen/Profile/Profile';
 
 const Navigator = createMaterialTopTabNavigator({
 
@@ -50,6 +49,7 @@ const Navigator = createMaterialTopTabNavigator({
             )
         }
     },
+
 }, {
     initialRouteName: 'home',
     tabBarOptions: {
