@@ -7,6 +7,7 @@ import IconMaterial from 'react-native-vector-icons/MaterialIcons';
 import Terbang from '../../components/TerbangKeluarNegri/Terbang';
 import IconHero from '../../components/IconHero/IconHero';
 import ContentPromo from '../../components/ContentPromo/ContentPromo';
+import Jelajahi from '../../components/JelajahiNusantara/Jelajahi';
 
 class Home extends Component {
     constructor(props) {
@@ -33,6 +34,7 @@ class Home extends Component {
                         <ContentPromo />
                         <View style={style.shado, { backgroundColor: Color.SoftDark, height: 9, marginTop: 16, }}></View>
                         <Terbang />
+                        <Jelajahi />
                     </View>
                 </ScrollView>
             </>
