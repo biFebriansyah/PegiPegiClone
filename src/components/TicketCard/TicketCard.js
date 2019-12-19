@@ -39,7 +39,7 @@ export class TicketCard extends Component{
                             </View>
 
                             <TouchableOpacity style={{alignItems: 'flex-end', marginVertical: 10, marginHorizontal: 15}}>
-                                <Text style={{color: Color.primary, fontFamily: 'Roboto', fontSize: 18}}> DETAIL</Text>
+                                <Text style={{color: Color.primary, fontFamily: 'Roboto', fontSize: 14}}> DETAIL</Text>
                             </TouchableOpacity>
                         </View>
                     </BoxShadow>
