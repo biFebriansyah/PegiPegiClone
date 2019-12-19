@@ -63,8 +63,7 @@ const Navigator = createMaterialTopTabNavigator({
             margin: 0
         },
         tabStyle: {
-            width: 100,
-            margin: 0
+            margin: 0,
         },
 
         activeTintColor: '#F97242',

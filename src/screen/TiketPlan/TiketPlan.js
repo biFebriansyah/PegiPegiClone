@@ -4,16 +4,18 @@ import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 import IconAnt from 'react-native-vector-icons/AntDesign';
 
+import TiketCard from '../../components/TiketCard/TiketCard';
+
 export class TiketPlan extends Component {
+
     constructor(props) {
         super(props)
 
         this.state = {
-
         }
+
         this.goBack = this.goBack.bind(this)
     }
-
 
     goBack() {
         const { goBack } = this.props.navigation;
@@ -27,8 +29,8 @@ export class TiketPlan extends Component {
                     <IconAnt name='arrowleft' size={24} color="#FFE0D5" onPress={this.goBack} style={style.Icon} />
                     <Text style={{ color: '#FFF', fontSize: 20, fontWeight: 'bold' }}>Titel Pesanan Here</Text>
                 </Header>
-                <View style={{ flex: 1 }}>
-
+                <View>
+                    <TiketCard />
                 </View>
             </>
         )
