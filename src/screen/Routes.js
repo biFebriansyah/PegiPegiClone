@@ -5,19 +5,15 @@ import TiketPlan from './TiketPlan/TiketPlan';
 import AppNavigator from '../components/Navigator/AppNavigator';
 import Login from '../components/Login/Login';
 import Splash from '../components/Splash/Splash';
-import Pesawat from './Pesawat/Pesawat';
-
-const SplashNavigator = createStackNavigator({
-    splash: { screen: Splash }
-}, {
-    headerMode: 'none'
-})
-
-const stackApp = createStackNavigator({
+import Dtpemesan from '../components/Data Pemesan/Dtpemesan';
+const stack = createStackNavigator({
 
     tiket: {
         screen: TiketPlan,
     },
+    dtpemesan: {
+        screen: Dtpemesan
+        },
     login: {
         screen: Login
     },
