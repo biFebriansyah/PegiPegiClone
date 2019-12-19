@@ -4,8 +4,12 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import TiketPlan from './TiketPlan/TiketPlan';
 import AppNavigator from '../components/Navigator/AppNavigator';
 import Login from '../components/Login/Login';
+<<<<<<< HEAD
 import Pesawat from  '../screen/Pesawat/Pesawat'
 import Splash from '../components/Splash/Splash';
+=======
+import SplashNavigator from '../components/Splash/Splash';
+>>>>>>> 48847a7e1648fbe503560ec053f1ce5f1c4f531c
 import Dtpemesan from '../components/Data Pemesan/Dtpemesan';
 
 const stackApp = createStackNavigator({
@@ -15,12 +19,9 @@ const stackApp = createStackNavigator({
     },
     dtpemesan: {
         screen: Dtpemesan
-        },
+    },
     login: {
         screen: Login
-    },
-    pesawat: {
-        screen: Pesawat
     },
     navi: {
         screen: AppNavigator,
