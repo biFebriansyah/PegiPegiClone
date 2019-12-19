@@ -4,7 +4,7 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import TiketPlan from './TiketPlan/TiketPlan';
 import AppNavigator from '../components/Navigator/AppNavigator';
 import Login from '../components/Login/Login';
-import SplashNavigator from '../components/Splash/Splash';
+import Splash from '../components/Splash/Splash';
 import Dtpemesan from '../components/Data Pemesan/Dtpemesan';
 
 const stackApp = createStackNavigator({
