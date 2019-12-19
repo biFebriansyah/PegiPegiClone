@@ -1,9 +1,10 @@
 import { createAppContainer } from 'react-navigation';
 import IconIon from 'react-native-vector-icons/Ionicons';
-import IconAnt from 'react-native-vector-icons/AntDesign';
+import IconFond from 'react-native-vector-icons/Foundation';
 import IconMaterial from 'react-native-vector-icons/MaterialIcons';
 import React from 'react';
 import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
+import IconAntypo from 'react-native-vector-icons/Entypo';
 
 
 import Home from '../../screen/Home/Home';
@@ -18,7 +19,7 @@ const Navigator = createMaterialTopTabNavigator({
         navigationOptions: () => ({
             tabBarLabel: 'Home',
             tabBarIcon: ({ tintColor }) => (
-                <IconIon name='md-home' color={tintColor} size={24} />
+                <IconFond name='home' color={tintColor} size={24} />
             )
         })
     },
@@ -27,7 +28,8 @@ const Navigator = createMaterialTopTabNavigator({
         navigationOptions: {
             tabBarLabel: 'Pesan',
             tabBarIcon: ({ tintColor }) => (
-                <IconAnt name='profile' color={tintColor} size={24} />
+                // <IconAnt name='profile' color={tintColor} size={24} />
+                <IconIon name='ios-list-box' color={tintColor} size={24} />
             )
         }
     },
@@ -36,7 +38,8 @@ const Navigator = createMaterialTopTabNavigator({
         navigationOptions: {
             tabBarLabel: 'Inbox',
             tabBarIcon: ({ tintColor }) => (
-                <IconAnt name='mail' color={tintColor} size={24} />
+                <IconAntypo name='mail' color={tintColor} size={24} />
+                // <IconAnt name='mail' color={tintColor} size={24} />
             )
         }
     },
@@ -57,10 +60,10 @@ const Navigator = createMaterialTopTabNavigator({
         labelStyle: {
             margin: 0,
             fontSize: 8,
-            fontWeight: '500',
         },
         iconStyle: {
-            margin: 0
+            margin: 0,
+            alignItems: 'center'
         },
         tabStyle: {
             margin: 0,

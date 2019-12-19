@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Button } from 'react-native';
+import { Text, View, Button, Dimensions } from 'react-native';
 import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, } from 'react-native';
+import { Text, View, Image, Dimensions, } from 'react-native';
 import Color from '../../global/style/Color';
 import { BoxShadow } from 'react-native-shadow';
 
@@ -7,9 +7,10 @@ export class TiketCard extends Component {
 
 
     render() {
+        const theWidth = Dimensions.get('window').width - 10
         const shadowOpt = {
-            width: 380, height: 151, color: '#333', border: 2, radius: 5, opacity: 0.2, x: 0, y: 5,
-            style: { marginVertical: 5, marginHorizontal: 6 },
+            width: theWidth, height: 151, color: '#333', border: 2, radius: 5, opacity: 0.2, x: 0, y: 5,
+            style: { marginVertical: 5 },
         };
 
         return (

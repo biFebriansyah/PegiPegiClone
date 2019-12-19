@@ -29,7 +29,7 @@ export class TiketPlan extends Component {
                     <IconAnt name='arrowleft' size={24} color="#FFE0D5" onPress={this.goBack} style={style.Icon} />
                     <Text style={{ color: '#FFF', fontSize: 20, fontWeight: 'bold' }}>Titel Pesanan Here</Text>
                 </Header>
-                <View>
+                <View style={{ flex: 1, alignItems: 'center' }}>
                     <TiketCard />
                 </View>
             </>

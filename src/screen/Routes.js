@@ -1,12 +1,19 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import { createAppContainer } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import TiketPlan from './TiketPlan/TiketPlan';
 import AppNavigator from '../components/Navigator/AppNavigator';
 import Login from '../components/Login/Login';
 import Splash from '../components/Splash/Splash';
+import Pesawat from './Pesawat/Pesawat';
 
-const stack = createStackNavigator({
+const SplashNavigator = createStackNavigator({
+    splash: { screen: Splash }
+}, {
+    headerMode: 'none'
+})
+
+const stackApp = createStackNavigator({
 
     tiket: {
         screen: TiketPlan,
@@ -14,8 +21,8 @@ const stack = createStackNavigator({
     login: {
         screen: Login
     },
-    splash: {
-        screen: Splash
+    pesawat: {
+        screen: Pesawat
     },
     navi: {
         screen: AppNavigator,
@@ -25,10 +32,22 @@ const stack = createStackNavigator({
     }
 
 }, {
-    initialRouteName: 'splash',
+    initialRouteName: 'navi',
     headerMode: 'none'
 })
 
-const Routes = createAppContainer(stack)
+const Routes = createAppContainer(createSwitchNavigator({
+    App: {
+        screen: stackApp
+    },
+    Splash: {
+        screen: SplashNavigator,
+        navigationOptions: {
+
+        }
+    }
+}, {
+    initialRouteName: 'Splash'
+}))
 
 export default Routes

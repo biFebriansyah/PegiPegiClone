@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Image, StyleSheet, ImageBackground } from 'react-native';
+import { Text, View, Image, StyleSheet, ImageBackground, Button } from 'react-native';
 import Color from '../../global/style/Color';
 
 class IconHero extends Component {
