@@ -134,6 +134,7 @@ export class Dtpemesan extends Component {
                 paddingVertical: 5,
               }}>
               <Text style={{ color: 'white' }}> Simpan </Text>
+              <Text style={{ color: 'white' }}> Simpan </Text>
             </Button>
           </View>
         
