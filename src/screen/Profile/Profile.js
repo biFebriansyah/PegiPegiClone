@@ -5,6 +5,7 @@ import Color from '../../global/style/Color';
 import { Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Icons from 'react-native-vector-icons/FontAwesome5';
+import Iconp from 'react-native-vector-icons/SimpleLineIcons';
 export class Profile extends Component {
 
   render() {
@@ -31,10 +32,6 @@ export class Profile extends Component {
             }}>
             <Text style={{ color: 'white' }}> REGISTER </Text>
           </Button>
-
-
-
-
           <View
             style={{ alignItems: 'center', marginTop: 25, flexDirection: 'row', paddingHorizontal: 13 }}>
             <Text style={{ color: '#a5a5a5' }}>
@@ -67,28 +64,19 @@ export class Profile extends Component {
           </View>
           <View style={style.shado, { backgroundColor: "#FAFAFA", height: 30, marginTop: 16, }}></View>
           <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
-            <Icons name="user-lock" style={{ width: 20, height: 20, color: "#F97432" }} />
+            <Iconp name="earphones-alt" style={{ width: 20, height: 20, color: "#D8D8D8" }} />
             <Text style={{ fontSize: 16, marginLeft: 6 }}> Pusat Bantuan  </Text>
             <Icon name="right" size={15} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5 }} />
           </View>
           <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
-            <Icons name="user-lock" style={{ width: 20, height: 20, color: "#F97432" }} />
+            <Icons name="newspaper" style={{ width: 20, height: 20, color: "#D8D8D8" }} />
             <Text style={{ fontSize: 16, marginLeft: 6 }}> Newsletter  </Text>
-            <Icon name="right" size={15} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5 }} />
+            <Icon name="right" size={15} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5, }} />
           </View>
           <View style={style.shado, { backgroundColor: "#FAFAFA", height: 70, marginTop: 16, }}>
-          <Text style={{ alignItems: 'center' , fontSize: 20, fontWeight: 'bold', }}>Version 2.10.0</Text>
-
-
-
-
+          <Text style={{ alignItems: 'center' ,color:"#F97432", fontSize: 15,  }}>Version 2.10.0</Text>
           </View>
         </Content>
-
-
-
-
-
       </>
     )
   }
