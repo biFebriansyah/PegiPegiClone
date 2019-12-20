@@ -6,11 +6,15 @@ import AppNavigator from '../components/Navigator/AppNavigator';
 import Login from '../components/Login/Login';
 import SplashNavigator from '../components/Splash/Splash';
 import Dtpemesan from '../components/Data Pemesan/Dtpemesan';
+import BandaraPlan from '../screen/BandaraPlan/BandaraPlan';
 
 const stackApp = createStackNavigator({
 
     tiket: {
         screen: TiketPlan,
+    },
+    listbandara: {
+        screen: BandaraPlan
     },
     dtpemesan: {
         screen: Dtpemesan
