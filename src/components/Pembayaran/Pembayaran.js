@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Dimensions, ScrollView, Image } from 'react-native';
-import { Header, Content } from 'native-base';
+import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 import IconAnt from 'react-native-vector-icons/AntDesign';
 import IconEntypo from 'react-native-vector-icons/Entypo'
@@ -42,7 +42,7 @@ export class Pembayaran extends Component {
                         <View style={{ paddingBottom: 10 }}>
                             <Text style={{ fontFamily: 'Roboto-Bold', color: "#999", fontSize: 20 }}>
                                 Transfer Bank
-                        </Text>
+                            </Text>
                             <BoxShadow setting={shadowOpt}>
                                 <View style={{ flex: 1 }}>
                                     <View style={{ flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#fff', height: 49, paddingLeft: 10, marginVertical: 5, borderRadius: 5, borderBottomEndRadius: 0, borderBottomStartRadius: 0, }}>
@@ -51,6 +51,7 @@ export class Pembayaran extends Component {
                                     </View>
                                 </View>
                             </BoxShadow>
+                            
                             <BoxShadow setting={shadowOpttt}>
                                 <View style={{ flex: 1 }}>
                                     <View style={{ flexDirection: 'row', backgroundColor: '#fff', height: 49, paddingLeft: 10, marginVertical: 0, borderRadius: 0, justifyContent: 'center' }}>
@@ -59,6 +60,7 @@ export class Pembayaran extends Component {
                                     </View>
                                 </View>
                             </BoxShadow>
+                            
                             <BoxShadow setting={shadowOpttt}>
                                 <View style={{ flex: 1 }}>
                                     <View style={{ flexDirection: 'row', backgroundColor: '#fff', height: 49, paddingLeft: 10, marginVertical: 0, borderRadius: 0, justifyContent: 'center' }}>
@@ -67,6 +69,7 @@ export class Pembayaran extends Component {
                                     </View>
                                 </View>
                             </BoxShadow>
+                            
                             <BoxShadow setting={shadowOptttt}>
                                 <View style={{ flex: 1 }}>
                                     <View style={{ flexDirection: 'row', backgroundColor: '#fff', height: 49, paddingLeft: 10, marginVertical: 0, borderRadius: 5, borderTopEndRadius: 0, borderTopStartRadius: 0, justifyContent: 'center' }}>
