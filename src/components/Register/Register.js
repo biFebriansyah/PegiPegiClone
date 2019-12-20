@@ -10,7 +10,7 @@ import LoadingScreen from '../Loading/LoadingScreen';
 
 export class Register extends Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -34,13 +34,13 @@ export class Register extends Component {
     this.goBacks = this.goBacks.bind(this);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.setState({
       isLoading: false,
     });
   }
 
-  checkedChange () {
+  checkedChange() {
     if (!this.state.checkbox) {
       this.setState({
         checkbox: true,
@@ -54,51 +54,51 @@ export class Register extends Component {
     }
   }
 
-  changeColorFocus (name) {
+  changeColorFocus(name) {
     if (name === 'username') {
-      this.setState({colorUsername: Color.primary});
+      this.setState({ colorUsername: Color.primary });
     }
     if (name === 'fullname') {
-      this.setState({colorFullname: Color.primary});
+      this.setState({ colorFullname: Color.primary });
     }
     if (name === 'password') {
-      this.setState({colorPassword: Color.primary});
+      this.setState({ colorPassword: Color.primary });
     }
     if (name === 'konfirmasi') {
-      this.setState({colorKonfirmasi: Color.primary});
+      this.setState({ colorKonfirmasi: Color.primary });
     }
   }
 
-  changeColorBlur (name) {
+  changeColorBlur(name) {
 
     if (name === 'username') {
       if (!this.state.username) {
-        this.setState({colorUsername: '#bbb'});
+        this.setState({ colorUsername: '#bbb' });
       }
     }
     if (name === 'fullname') {
       if (!this.state.fullname) {
-        this.setState({colorFullname: '#bbb'});
+        this.setState({ colorFullname: '#bbb' });
       }
     }
     if (name === 'password') {
       if (!this.state.password) {
-        this.setState({colorPassword: '#bbb'});
+        this.setState({ colorPassword: '#bbb' });
       }
     }
     if (name === 'konfirmasi') {
       if (!this.state.konfirmasi) {
-        this.setState({colorKonfirmasi: '#bbb'});
+        this.setState({ colorKonfirmasi: '#bbb' });
       }
     }
   }
 
-  goBacks () {
-    const {goBack} = this.props.navigation;
+  goBacks() {
+    const { goBack } = this.props.navigation;
     goBack();
   }
 
-  async loginSubmit () {
+  async loginSubmit() {
     const responseApi = await post('/auth/register', {
       email_users: this.state.username,
       name_users: this.state.fullname,
@@ -125,7 +125,7 @@ export class Register extends Component {
             text: 'Back to login', onPress: () => this.props.navigation.replace('login'),
           },
         ],
-        {cancelable: false})
+        { cancelable: false })
     } else {
       await this.setState({
         isLoading: false,
@@ -142,11 +142,11 @@ export class Register extends Component {
             text: 'Back to login', onPress: () => this.props.navigation.replace('login'),
           },
         ],
-        {cancelable: false})
+        { cancelable: false })
     }
   }
 
-  render () {
+  render() {
     if (this.state.isLoading) {
       return <LoadingScreen
         color={'warning'}
@@ -156,11 +156,11 @@ export class Register extends Component {
         <>
           <Header
             androidStatusBarColor={Color.primary}
-            style={{backgroundColor: Color.primary, alignItems: 'center', justifyContent: 'flex-start'}}>
+            style={{ backgroundColor: Color.primary, alignItems: 'center', justifyContent: 'flex-start' }}>
             <TouchableOpacity>
-              <IconFeather name="x" size={24} color={'white'} onPress={this.goBacks}/>
+              <IconFeather name="x" size={24} color={'white'} onPress={this.goBacks} />
             </TouchableOpacity>
-            <Text style={{color: '#FFF', fontSize: 20, fontWeight: 'bold', marginLeft: 20}}>
+            <Text style={{ color: '#FFF', fontSize: 20, fontWeight: 'bold', marginLeft: 20 }}>
               Daftar
             </Text>
           </Header>
@@ -174,89 +174,89 @@ export class Register extends Component {
                 paddingVertical: 10,
                 fontFamily: 'Roboto-Bold',
               }}>Isi data diri Anda secara lengkap dan nikmati berbagai promo khusus member!</Text>
-              <Text style={{textAlign: 'center', paddingHorizontal: 20, color: '#999', fontFamily: 'Roboto'}}>Dapatkan
+              <Text style={{ textAlign: 'center', paddingHorizontal: 20, color: '#999', fontFamily: 'Roboto' }}>Dapatkan
                 juga PePePoin yang bisa Anda gunakan sebagai diskon untuk transaksi berikutnya.</Text>
             </View>
 
-            <View style={{paddingHorizontal: 20}}>
-              <Item floatingLabel style={{marginTop: 8, borderColor: this.state.colorUsername}}>
-                <Label style={{color: this.state.colorUsername, fontSize: 16}}>Email</Label>
+            <View style={{ paddingHorizontal: 20 }}>
+              <Item floatingLabel style={{ marginTop: 8, borderColor: this.state.colorUsername }}>
+                <Label style={{ color: this.state.colorUsername, fontSize: 16 }}>Email</Label>
                 <Input
                   onFocus={() => this.changeColorFocus('username')}
                   onBlur={() => this.changeColorBlur('username')}
-                  onChangeText={(username) => this.setState({username})}
-                  style={{borderBottomColor: 'red'}}
+                  onChangeText={(username) => this.setState({ username })}
+                  style={{ borderBottomColor: 'red' }}
                 />
               </Item>
 
-              <Item floatingLabel style={{marginTop: 18, borderColor: this.state.colorFullname}}>
-                <Label style={{color: this.state.colorFullname, fontSize: 16}}>Nama lengkap (tanpa gelar)</Label>
+              <Item floatingLabel style={{ marginTop: 18, borderColor: this.state.colorFullname }}>
+                <Label style={{ color: this.state.colorFullname, fontSize: 16 }}>Nama lengkap (tanpa gelar)</Label>
                 <Input
                   onFocus={() => this.changeColorFocus('fullname')}
                   onBlur={() => this.changeColorBlur('fullname')}
-                  onChangeText={(fullname) => this.setState({fullname})}
-                  style={{borderBottomColor: 'red'}}
+                  onChangeText={(fullname) => this.setState({ fullname })}
+                  style={{ borderBottomColor: 'red' }}
                 />
               </Item>
-              <Text style={{fontSize: 12, color: '#bbb'}}> Sesuai kartu identitas (KTP/SIM/paspor) </Text>
+              <Text style={{ fontSize: 12, color: '#bbb' }}> Sesuai kartu identitas (KTP/SIM/paspor) </Text>
 
-              <Item floatingLabel style={{marginTop: 5, borderColor: this.state.colorPassword}}>
-                <Label style={{color: this.state.colorPassword, fontSize: 16}}>Password</Label>
+              <Item floatingLabel style={{ marginTop: 5, borderColor: this.state.colorPassword }}>
+                <Label style={{ color: this.state.colorPassword, fontSize: 16 }}>Password</Label>
                 <Input
                   onFocus={() => this.changeColorFocus('password')}
                   onBlur={() => this.changeColorBlur('password')}
-                  onChangeText={(password) => this.setState({password})}
+                  onChangeText={(password) => this.setState({ password })}
                 />
               </Item>
-              <Text style={{fontSize: 12, color: '#bbb'}}> 6-20 karakter mengandung huruf dan angka </Text>
+              <Text style={{ fontSize: 12, color: '#bbb' }}> 6-20 karakter mengandung huruf dan angka </Text>
 
-              <Item floatingLabel style={{marginTop: 5, borderColor: this.state.colorKonfirmasi}}>
-                <Label style={{color: this.state.colorKonfirmasi, fontSize: 16}}>Konfirmasi Password</Label>
+              <Item floatingLabel style={{ marginTop: 5, borderColor: this.state.colorKonfirmasi }}>
+                <Label style={{ color: this.state.colorKonfirmasi, fontSize: 16 }}>Konfirmasi Password</Label>
                 <Input
                   onFocus={() => this.changeColorFocus('konfirmasi')}
                   onBlur={() => this.changeColorBlur('konfirmasi')}
-                  onChangeText={(konfirmasi) => this.setState({konfirmasi})}
+                  onChangeText={(konfirmasi) => this.setState({ konfirmasi })}
                 />
               </Item>
 
-              <View style={{flexDirection: 'row', paddingVertical: 20, marginTop: 20, right: 10}}>
-                <CheckBox checked={this.state.checkbox} onPress={this.checkedChange} color={this.state.colorcheck}/>
-                <View style={{flexDirection: 'row', bottom: 5}}>
-                  <Text style={{color: '#333', fontFamily: 'Roboto', fontSize: 12, paddingLeft: 20}}>
+              <View style={{ flexDirection: 'row', paddingVertical: 20, marginTop: 20, right: 10 }}>
+                <CheckBox checked={this.state.checkbox} onPress={this.checkedChange} color={this.state.colorcheck} />
+                <View style={{ flexDirection: 'row', bottom: 5 }}>
+                  <Text style={{ color: '#333', fontFamily: 'Roboto', fontSize: 12, paddingLeft: 20 }}>
                     Saya setuju dengan
                   </Text>
-                  <Text style={{color: Color.primary, fontFamily: 'Roboto', fontSize: 12, paddingLeft: 5}}>
+                  <Text style={{ color: Color.primary, fontFamily: 'Roboto', fontSize: 12, paddingLeft: 5 }}>
                     Kebijakan Privasi
                   </Text>
-                  <Text style={{color: '#333', fontFamily: 'Roboto', fontSize: 12, paddingLeft: 5}}>
+                  <Text style={{ color: '#333', fontFamily: 'Roboto', fontSize: 12, paddingLeft: 5 }}>
                     dan
                   </Text>
-                  <Text style={{color: Color.primary, fontFamily: 'Roboto', fontSize: 12, paddingLeft: 5}}>
+                  <Text style={{ color: Color.primary, fontFamily: 'Roboto', fontSize: 12, paddingLeft: 5 }}>
                     Ketentuan
                   </Text>
                 </View>
               </View>
               <View>
-                <View style={{flexDirection: 'row', bottom: 30}}>
-                  <Text style={{color: Color.primary, fontFamily: 'Roboto', fontSize: 12, paddingLeft: 30}}>
+                <View style={{ flexDirection: 'row', bottom: 30 }}>
+                  <Text style={{ color: Color.primary, fontFamily: 'Roboto', fontSize: 12, paddingLeft: 30 }}>
                     Penggunaan
                   </Text>
-                  <Text style={{color: '#333', fontFamily: 'Roboto', fontSize: 12, paddingLeft: 5}}>
+                  <Text style={{ color: '#333', fontFamily: 'Roboto', fontSize: 12, paddingLeft: 5 }}>
                     PegiPegi
                   </Text>
                 </View>
               </View>
 
               <Button onPress={this.loginSubmit}
-                      style={{
-                        backgroundColor: Color.primary,
-                        alignItems: 'center',
-                        marginTop: 20,
-                        borderRadius: 0,
-                        width: '100%',
-                        paddingVertical: 5,
-                      }}>
-                <Text style={{color: 'white'}}> REGISTER </Text>
+                style={{
+                  backgroundColor: Color.primary,
+                  alignItems: 'center',
+                  marginTop: 20,
+                  borderRadius: 0,
+                  width: '100%',
+                  paddingVertical: 5,
+                }}>
+                <Text style={{ color: 'white' }}> REGISTER </Text>
               </Button>
 
               <View
@@ -265,12 +265,12 @@ export class Register extends Component {
                   justifyContent: 'center',
                   marginTop: 20,
                 }}>
-                <Text style={{color: '#333'}}>
+                <Text style={{ color: '#333' }}>
                   {' '}
                   Sudah memiliki akun?{' '}
                 </Text>
-                <Text style={{color: Color.primary, fontWeight: 'bold'}}>Masuk</Text>
-                <Text style={{color: '#333'}}>
+                <Text style={{ color: Color.primary, fontWeight: 'bold' }}>Masuk</Text>
+                <Text style={{ color: '#333' }}>
                   {' '}
                   di sini{' '}
                 </Text>
@@ -278,12 +278,12 @@ export class Register extends Component {
             </View>
 
             <View
-              style={{alignItems: 'center', marginTop: 25, flexDirection: 'row', paddingHorizontal: 5}}>
-              <Text style={{color: '#a5a5a5'}}>
+              style={{ alignItems: 'center', marginTop: 25, flexDirection: 'row', paddingHorizontal: 5 }}>
+              <Text style={{ color: '#a5a5a5' }}>
                 - - - - - - - - - - - - - - - - - - - -{' '}
               </Text>
-              <Text style={{fontFamily: 'Roboto'}}> ATAU </Text>
-              <Text style={{color: '#a5a5a5'}}>
+              <Text style={{ fontFamily: 'Roboto' }}> ATAU </Text>
+              <Text style={{ color: '#a5a5a5' }}>
                 - - - - - - - - - - - - - - - - - - - -
               </Text>
             </View>
@@ -298,9 +298,9 @@ export class Register extends Component {
                 marginTop: 25,
                 marginBottom: 25,
               }}>
-              <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: 40}}>
+              <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: 40 }}>
                 <IconEntypo color={'#fff'} size={30} name="facebook"
-                            style={{position: 'absolute', left: 0, marginLeft: 5}}/>
+                  style={{ position: 'absolute', left: 0, marginLeft: 5 }} />
                 <Text
                   style={{
                     color: '#fff',
@@ -315,6 +315,8 @@ export class Register extends Component {
           </Content>
         </>
       );
+    }
+  }
 }
 
 export default Register;
