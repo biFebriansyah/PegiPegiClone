@@ -3,8 +3,8 @@ import { combineReducers } from 'redux'
 /**
  * Reducers
  */
-import Auth_token from '../actions/auth/token'
-import Users_readById from '../actions/users/readById'
+import Auth_token from '../reducers/auth/token'
+import Users_readById from '../reducers/users/readById'
 
 export default combineReducers({
   Auth_token,
