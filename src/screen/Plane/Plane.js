@@ -21,7 +21,7 @@ import CalendarPicker from 'react-native-calendar-picker';
 
 class Plane extends Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -37,7 +37,7 @@ class Plane extends Component {
     this.onDateChange = this.onDateChange.bind(this);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.setState({
       pp: false,
       modalPassenger: false,
@@ -48,7 +48,7 @@ class Plane extends Component {
     });
   }
 
-  onDateChange (date, type) {
+  onDateChange(date, type) {
     if (type === 'END_DATE') {
       this.setState({
         calendarReturn: date,
@@ -61,9 +61,9 @@ class Plane extends Component {
     }
   }
 
-  render () {
+  render() {
 
-    const {calendarDeparture, calendarReturn} = this.state;
+    const { calendarDeparture, calendarReturn } = this.state;
     const date = new Date();
     const minDate = date.setDate(date.getDate());
     const startDate = calendarDeparture ? calendarDeparture.toString().substr(4, 12) : '';
@@ -88,7 +88,7 @@ class Plane extends Component {
               iconLeft
               transparent
             >
-              <Icon name='arrow-back'/>
+              <Icon name='arrow-back' />
             </Button>
           </Left>
           <Body
@@ -251,9 +251,9 @@ class Plane extends Component {
                     fontSize: 13,
                   }}
                 >
-                  { this.state.adult } Dewasa,&nbsp;
-                  { this.state.child } Anak,&nbsp;
-                  { this.state.baby } Bayi
+                  {this.state.adult} Dewasa,&nbsp;
+                  {this.state.child} Anak,&nbsp;
+                  {this.state.baby} Bayi
                 </Text>
               </TouchableOpacity>
             </CardItem>
@@ -288,7 +288,6 @@ class Plane extends Component {
               modalPassenger: false,
             })
           }
-          style={styles.bottomModal}
         >
           <Container>
             <Grid>
@@ -343,7 +342,7 @@ class Plane extends Component {
                     }
                   }
                 >
-                  <Icon name='arrow-back'/>
+                  <Icon name='arrow-back' />
                 </Button>
               </Left>
               <Body
