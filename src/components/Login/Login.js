@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, View } from 'react-native';
-import { Header, Form, Item, Label, Input, Content, Text } from 'native-base';
+import { Alert, TouchableOpacity, View } from 'react-native';
+import { Header, Item, Label, Input, Content, Text } from 'native-base';
 import IconFeather from 'react-native-vector-icons/Feather';
 import IconEntypo from 'react-native-vector-icons/Entypo';
 import { Button } from 'react-native-paper';
 import Color from '../../global/style/Color';
+import { post } from '../../utils/axios'
+
+import jwtDecode from 'jwt-decode'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { token } from '../../utils/redux/actions/auth/token'
+import { readById } from '../../utils/redux/actions/users/readById'
+
 
 export class Login extends Component {
   constructor(props) {
@@ -13,8 +21,8 @@ export class Login extends Component {
     this.state = {
       colorUsername: '#bbb',
       colorPassword: '#bbb',
-      username: '',
-      password: ''
+      username: null,
+      password: null
     };
     this.changeColorFocus = this.changeColorFocus.bind(this);
     this.changeColorBlur = this.changeColorBlur.bind(this);
@@ -50,11 +58,44 @@ export class Login extends Component {
     goBack()
   }
 
-  loginSubmit() {
-    console.log(this.state.username)
-    console.log(this.state.password)
+  async loginSubmit() {
+    const responseApi = await post('/auth/login', {
+      email_users: this.state.username,
+      password_users: this.state.password,
+    });
+    await this.isAuthentication(responseApi);
   }
 
+  async isAuthentication(responseApi) {
+    const status = await responseApi.data.status;
+    if (status === 200) {
+      const token = await responseApi.data.payload.token;
+      const decode = await jwtDecode(token);
+      const idUsers = await decode.id_users;
+      await this.props.readById(idUsers, token);
+      await this.props.token(token);
+      await Alert.alert(
+        'Success',
+        'Login Success',
+        [
+          {
+            text: 'Back to Home', onPress: () => this.props.navigation.navigate('home'),
+          },
+        ],
+        {cancelable: false})
+    } else {
+      await Alert.alert(
+        'Unauthorized',
+        'Username or password wrong',
+        [
+          {
+            text: 'Ok',
+            style: 'cancel',
+          }
+        ],
+        {cancelable: false})
+    }
+  }
 
   render() {
     return (
@@ -116,7 +157,7 @@ export class Login extends Component {
                 </Text>
               </TouchableOpacity>
               <Text style={{ fontSize: 18, color: '#a5a5a5', bottom: 5 }}> | </Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('register')}>
                 <Text style={{ color: Color.primary, fontWeight: 'bold' }}>
                   {' '}
                   Belum memiliki akun?{' '}
@@ -164,4 +205,8 @@ export class Login extends Component {
   }
 }
 
-export default Login;
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ token, readById }, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(Login);

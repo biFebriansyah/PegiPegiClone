@@ -1,8 +1,21 @@
 import React, { Component } from 'react'
-import { Text, View, Image, StyleSheet, ImageBackground, Button } from 'react-native';
+import { Text, View, Image, StyleSheet, ImageBackground, TouchableHighlight } from 'react-native';
 import Color from '../../global/style/Color';
 
 class IconHero extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+
+        }
+        this.pesawatOnPress = this.pesawatOnPress.bind(this);
+    }
+
+    pesawatOnPress() {
+        this.props.navigation.navigate('pesawat')
+    }
+
     render() {
         return (
             <View style={{ width: '100%', backgroundColor: '#bbb', height: 214 }}>
@@ -15,9 +28,9 @@ class IconHero extends Component {
                             <Text style={style.textShadwo} >KERETA API</Text>
                         </View>
                         <View style={{ alignItems: 'center', justifyContent: 'center', }} >
-                            <View style={{ backgroundColor: Color.lightAcent, width: 70, height: 70, borderRadius: 50, justifyContent: 'center', alignItems: 'center' }}>
+                            <TouchableHighlight onPress={this.pesawatOnPress} underlayColor='white' style={{ backgroundColor: Color.lightAcent, width: 70, height: 70, borderRadius: 50, justifyContent: 'center', alignItems: 'center' }}>
                                 <Image source={require('../../global/asset/plan.png')} style={{ width: 40, height: 40 }} />
-                            </View>
+                            </TouchableHighlight>
                             <Text style={style.textShadwo} >PESAWAT</Text>
                         </View>
                         <View style={{ alignItems: 'center', justifyContent: 'center', }} >
