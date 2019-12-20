@@ -66,6 +66,7 @@ export class Profile extends Component {
           <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
             <Iconp name="earphones-alt" style={{ width: 20, height: 20, color: "#D8D8D8" }} />
             <Text style={{ fontSize: 16, marginLeft: 6 }}> Pusat Bantuan  </Text>
+            <Text style={{ fontSize: 16,}}> Pusat Bantuan  </Text>
             <Icon name="right" size={15} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5 }} />
           </View>
           <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
@@ -74,7 +75,7 @@ export class Profile extends Component {
             <Icon name="right" size={15} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5, }} />
           </View>
           <View style={style.shado, { backgroundColor: "#FAFAFA", height: 70, marginTop: 16, }}>
-          <Text style={{ alignItems: 'center' ,color:"#F97432", fontSize: 15,  }}>Version 2.10.0</Text>
+          <Text style={{ alignItems: 'center' , fontSize: 15,  }}>Version 2.10.0</Text>
           </View>
         </Content>
       </>
