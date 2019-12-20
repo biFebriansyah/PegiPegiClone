@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {TouchableOpacity, View} from 'react-native';
+import React, { Component } from 'react';
+import { TouchableOpacity, View } from 'react-native';
 import {
   Header,
   Form,
@@ -13,7 +13,7 @@ import {
 } from 'native-base';
 import IconFeather from 'react-native-vector-icons/Feather';
 import IconEntypo from 'react-native-vector-icons/Entypo';
-import {Button} from 'react-native-paper';
+import { Button } from 'react-native-paper';
 import Color from '../../global/style/Color';
 
 export class Login extends Component {
@@ -21,10 +21,10 @@ export class Login extends Component {
     super(props);
 
     this.state = {
-        checkbox: false,
-        colorcheck: '#bbb',
-        colorpassname: '#bbb',
-        nama: '',
+      checkbox: false,
+      colorcheck: '#bbb',
+      colorpassname: '#bbb',
+      nama: '',
       selected: 'key0',
     };
     this.checkedChange = this.checkedChange.bind(this);
@@ -35,20 +35,20 @@ export class Login extends Component {
   }
 
   checkedChange() {
-      if (!this.state.checkbox) {
-        this.setState({
-            checkbox: true,
-            colorcheck: Color.primary
-            })
-      } else {
-        this.setState({
-            checkbox: false,
-            colorcheck: '#bbb'
-            })
-      }
+    if (!this.state.checkbox) {
+      this.setState({
+        checkbox: true,
+        colorcheck: Color.primary
+      })
+    } else {
+      this.setState({
+        checkbox: false,
+        colorcheck: '#bbb'
+      })
+    }
   }
 
-  onValueChange(value: string) {
+  onValueChange(value) {
     this.setState({
       selected: value,
     });
@@ -56,20 +56,20 @@ export class Login extends Component {
 
   changeColorFocus(name) {
     if (name === 'passname') {
-      this.setState({colorpassname: Color.primary});
+      this.setState({ colorpassname: Color.primary });
     }
   }
 
   changeColorBlur(name) {
     if (name === 'passname') {
       if (!this.state.passname) {
-        this.setState({colorpassname: '#bbb'});
+        this.setState({ colorpassname: '#bbb' });
       }
     }
   }
 
   goBacks() {
-    const {goBack} = this.props.navigation;
+    const { goBack } = this.props.navigation;
     goBack();
   }
 
@@ -108,27 +108,27 @@ export class Login extends Component {
 
         <Content>
           <View style={{ backgroundColor: '#eaeaea', height: 50, justifyContent: 'center', paddingLeft: 10 }}>
-            <Text style={{color: '#888', fontFamily: 'Roboto-Bold', fontSize: 14}}>
+            <Text style={{ color: '#888', fontFamily: 'Roboto-Bold', fontSize: 14 }}>
               {' '}
               Data Penumpang{' '}
             </Text>
           </View>
 
-          <View style={{ flexDirection: 'row', justifyContent: 'flex-start', paddingVertical: 20, paddingHorizontal: 20}}>
+          <View style={{ flexDirection: 'row', justifyContent: 'flex-start', paddingVertical: 20, paddingHorizontal: 20 }}>
             <CheckBox checked={this.state.checkbox} onPress={this.checkedChange} color={this.state.colorcheck} />
-            <Text style={{ color: '#888', fontFamily: 'Roboto', fontSize: 14, paddingLeft: 20}}>
+            <Text style={{ color: '#888', fontFamily: 'Roboto', fontSize: 14, paddingLeft: 20 }}>
               Samakan dengan data pemesan
             </Text>
           </View>
 
-          <View style={{paddingHorizontal: 10}}>
-            <Text style={{fontSize: 14, color: '#888'}}>Titel</Text>
+          <View style={{ paddingHorizontal: 10 }}>
+            <Text style={{ fontSize: 14, color: '#888' }}>Titel</Text>
             <Form>
               <Item picker>
                 <Picker
-                mode="dropdown"
-                selectedValue={this.state.selected}
-                onValueChange={this.onValueChange.bind(this)}
+                  mode="dropdown"
+                  selectedValue={this.state.selected}
+                  onValueChange={this.onValueChange.bind(this)}
                 >
                   <Picker.Item label="Tuan" value="key0" />
                   <Picker.Item label="Nyonya" value="key1" />
@@ -138,60 +138,60 @@ export class Login extends Component {
             </Form>
           </View>
 
-          <View style={{paddingHorizontal: 10}}>
+          <View style={{ paddingHorizontal: 10 }}>
             <Item
               floatingLabel
-              style={{marginTop: 18, borderColor: this.state.colorpassname}}>
-              <Label style={{color: this.state.colorpassname, fontSize: 12}}>
+              style={{ marginTop: 18, borderColor: this.state.colorpassname }}>
+              <Label style={{ color: this.state.colorpassname, fontSize: 12 }}>
                 Nama Penumpang
               </Label>
               <Input
                 onFocus={() => this.changeColorFocus('passname')}
                 onBlur={() => this.changeColorBlur('passname')}
-                onChangeText={passname => this.setState({passname})}
-                style={{borderBottomColor: 'red'}}
+                onChangeText={passname => this.setState({ passname })}
+                style={{ borderBottomColor: 'red' }}
               />
             </Item>
-            <Text style={{fontSize: 14, color: '#888'}}> Sesuai kartu identitas</Text>
+            <Text style={{ fontSize: 14, color: '#888' }}> Sesuai kartu identitas</Text>
           </View>
 
-          <View style={{ backgroundColor: '#eaeaea', height: 50, justifyContent: 'center', paddingLeft: 10, marginTop: 20}}>
-            <Text style={{ color: '#888', fontFamily: 'Roboto-Bold'}}> Fasilitas </Text>
+          <View style={{ backgroundColor: '#eaeaea', height: 50, justifyContent: 'center', paddingLeft: 10, marginTop: 20 }}>
+            <Text style={{ color: '#888', fontFamily: 'Roboto-Bold' }}> Fasilitas </Text>
           </View>
 
-          <Text style={{fontSize: 20, paddingTop: 20, paddingLeft: 10, fontFamily: 'Roboto-Bold'}}>
+          <Text style={{ fontSize: 20, paddingTop: 20, paddingLeft: 10, fontFamily: 'Roboto-Bold' }}>
             {' '}
             Bagasi Pesawat{' '}
           </Text>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingTop: 20, paddingLeft: 10 }}>
-            <Text style={{fontFamily: 'Roboto'}}> Pesawat pergi</Text>
-            <Form style={{padding: 0}}>
-              <Picker 
+            <Text style={{ fontFamily: 'Roboto' }}> Pesawat pergi</Text>
+            <Form style={{ padding: 0 }}>
+              <Picker
                 mode="dropdown"
-                style={{width: 85, height: 10}}
-                //   selectedValue={this.state.selected}
-                //   onValueChange={this.onValueChange.bind(this)}
+                style={{ width: 85, height: 10 }}
+              //   selectedValue={this.state.selected}
+              //   onValueChange={this.onValueChange.bind(this)}
               >
                 <Picker.Item label="20 Kg (gratis)" value="key0" />
               </Picker>
             </Form>
           </View>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 10 }}>
-            <Text style={{fontSize: 14, color: '#888', fontFamily: 'Roboto'}}>
+            <Text style={{ fontSize: 14, color: '#888', fontFamily: 'Roboto' }}>
               {' '}
               Garuda Indonesia GA 306
             </Text>
-            <Text style={{fontFamily: 'Roboto', fontSize: 14, color: '#888', paddingRight: 21}}> Gratis </Text>
+            <Text style={{ fontFamily: 'Roboto', fontSize: 14, color: '#888', paddingRight: 21 }}> Gratis </Text>
           </View>
 
-        <View style={{backgroundColor:'#eaeaea', paddingTop: 10, marginTop: 20, height: 110}}>
-          <Button
-            onPress={this.loginSubmit}
-            style={{ backgroundColor: Color.primary, alignContent: 'center', marginTop: 20, marginHorizontal: 15, borderRadius: 0, width: '90%', paddingVertical: 5}}>
-            <Text style={{color: 'white'}}> simpan </Text>
-          </Button>
-         </View>
+          <View style={{ backgroundColor: '#eaeaea', paddingTop: 10, marginTop: 20, height: 110 }}>
+            <Button
+              onPress={this.loginSubmit}
+              style={{ backgroundColor: Color.primary, alignContent: 'center', marginTop: 20, marginHorizontal: 15, borderRadius: 0, width: '90%', paddingVertical: 5 }}>
+              <Text style={{ color: 'white' }}> simpan </Text>
+            </Button>
+          </View>
         </Content>
       </>
     );
