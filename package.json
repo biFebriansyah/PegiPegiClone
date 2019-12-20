@@ -10,10 +10,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.7.1",
     "@react-native-community/viewpager": "^3.3.0",
     "@react-navigation/bottom-tabs": "^5.0.0-alpha.27",
     "@react-navigation/material-bottom-tabs": "^5.0.0-alpha.26",
     "@react-navigation/native": "^5.0.0-alpha.20",
+    "moment": "^2.24.0",
     "native-base": "^2.13.8",
     "react": "16.9.0",
     "react-native": "0.61.5",
