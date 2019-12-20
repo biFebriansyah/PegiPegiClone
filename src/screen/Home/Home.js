@@ -31,7 +31,9 @@ class Home extends Component {
                 </Header>
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={{ flex: 1 }}>
-                        <IconHero />
+                        <IconHero
+                            navigation={this.props.navigation}
+                        />
                         <ContentPromo />
                         <View style={style.shado, { backgroundColor: Color.SoftDark, height: 9, marginTop: 16, }}></View>
                         <Terbang />

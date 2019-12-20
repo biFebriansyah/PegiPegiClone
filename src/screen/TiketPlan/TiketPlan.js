@@ -31,7 +31,7 @@ export class TiketPlan extends Component {
           </Text>
         </Header>
 
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, alignItems: 'center' }}>
           <TicketCard />
         </View>
       </>
