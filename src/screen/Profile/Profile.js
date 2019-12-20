@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
 import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 
 export class Profile extends Component {
+
     render() {
         return (
             <>
@@ -11,11 +12,12 @@ export class Profile extends Component {
                     <Text style={{ color: '#FFF', fontSize: 20, fontWeight: 'bold' }}>Profile</Text>
                 </Header>
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                    <Text> profile here </Text>
+                    <Text>Profile here</Text>
                 </View>
             </>
         )
     }
 }
+
 
 export default Profile

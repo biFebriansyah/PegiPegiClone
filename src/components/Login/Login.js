@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { TouchableOpacity, View } from 'react-native';
-import { Header, Form, Item, Label, Input, Content, Text } from 'native-base';
+import { Header, Item, Label, Input, Content, Text } from 'native-base';
 import IconFeather from 'react-native-vector-icons/Feather';
 import IconEntypo from 'react-native-vector-icons/Entypo';
 import { Button } from 'react-native-paper';
@@ -52,7 +52,6 @@ export class Login extends Component {
 
   loginSubmit() {
     console.log(this.state.username)
-    console.log(this.state.password)
   }
 
 
@@ -116,7 +115,7 @@ export class Login extends Component {
                 </Text>
               </TouchableOpacity>
               <Text style={{ fontSize: 18, color: '#a5a5a5', bottom: 5 }}> | </Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('register')}>
                 <Text style={{ color: Color.primary, fontWeight: 'bold' }}>
                   {' '}
                   Belum memiliki akun?{' '}
