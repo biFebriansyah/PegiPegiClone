@@ -177,7 +177,7 @@ class Plane extends Component {
                   <Text
                     style={{
                       fontSize: 12,
-                      color: Color.lightDark,
+                      color: Color.SoftDark,
                     }}
                   >
                     Berangkat
@@ -201,7 +201,7 @@ class Plane extends Component {
                         <Text
                           style={{
                             fontSize: 12,
-                            color: Color.lightDark,
+                            color: Color.SoftDark,
                           }}
                         >
                           Pulang
@@ -241,7 +241,7 @@ class Plane extends Component {
                 <Text
                   style={{
                     fontSize: 12,
-                    color: Color.lightDark,
+                    color: Color.SoftDark,
                   }}
                 >
                   Penumpang
@@ -321,7 +321,7 @@ class Plane extends Component {
             <Header
               androidStatusBarColor={Color.primary}
               style={{
-                backgroundColor: Color.lightPrimary,
+                backgroundColor: Color.SoftDark,
                 alignItems: 'center',
                 justifyContent: 'flex-start',
               }}
@@ -373,7 +373,7 @@ class Plane extends Component {
                     minDate={minDate}
                     selectedStartDate={this.state.calendarDeparture}
                     selectedEndDate={this.state.calendarReturn}
-                    todayBackgroundColor={Color.lightPrimary}
+                    todayBackgroundColor={Color.SoftDark}
                     selectedDayColor={Color.primary}
                     onDateChange={this.onDateChange}
                   />
