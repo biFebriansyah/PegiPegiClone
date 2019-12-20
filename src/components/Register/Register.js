@@ -9,6 +9,7 @@ import Color from '../../global/style/Color';
 import LoadingScreen from '../Loading/LoadingScreen';
 
 export class Register extends Component {
+
   constructor (props) {
     super(props);
 
@@ -314,8 +315,6 @@ export class Register extends Component {
           </Content>
         </>
       );
-    }
-  }
 }
 
 export default Register;
