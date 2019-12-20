@@ -9,6 +9,7 @@ import Dtpemesan from '../components/Data Pemesan/Dtpemesan';
 import BandaraPlan from '../screen/BandaraPlan/BandaraPlan';
 import Pesawat from '../screen/Plane/Plane';
 import Register from '../components/Register/Register';
+import BandaraPlan from '../screen/BandaraPlan/BandaraPlan';
 
 
 const stackApp = createStackNavigator({

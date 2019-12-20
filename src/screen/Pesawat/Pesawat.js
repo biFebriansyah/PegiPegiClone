@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, ImageBackground, View, Dimensions, Switch } from 'react-native'
+import { Text, StyleSheet, ImageBackground, View, Dimensions, Switch, TouchableHighlight } from 'react-native'
 import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 import IconAnt from 'react-native-vector-icons/AntDesign';
@@ -63,7 +63,7 @@ export class Pesawat extends Component {
                     <ImageBackground source={require('../../../Global/asset/Image/components/pesawat.png')} style={{ flex: 1, position: 'relative' }} imageStyle={{ resizeMode: 'contain' }}>
                         <View style={{ width: 359, height: 330, position: 'absolute', borderRadius: 10, left: 17, top: 24 }}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 10, height: 50 }}>
-                                <Text style={{ fontWeight: 'bold' }}>Pulang Pergi</Text>
+                                <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Pulang Pergi</Text>
                                 <Switch
                                     trackColor={{
                                         true: Color.status_second,
@@ -78,17 +78,30 @@ export class Pesawat extends Component {
                                         }}
                                 />
                             </View>
-                            <View style={{ backgroundColor: 'red', height: '26%', marginTop: 9, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 60 }}>
-                                <View style={{}}>
-                                    <Text>Asal</Text>
-                                    <Text>JKT</Text>
+                            <View style={{ height: '26%', marginTop: 9, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 60 }}>
+                                <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                    <Text style={{ color: '#898989', fontSize: 15 }}>Asal</Text>
+                                    <Text style={{ color: '#4e4e4e', fontSize: 20, fontWeight: 'bold' }}>PLW</Text>
+                                    <Text>Palu</Text>
+                                </View>
+                                <View style={{ justifyContent: 'center', alignItems: 'center' }} >
+                                    <Text style={{ color: '#898989', fontSize: 15 }}>Tujuan</Text>
+                                    <Text style={{ color: '#4e4e4e', fontSize: 20, fontWeight: 'bold' }}>JKT</Text>
                                     <Text>Jakarta</Text>
                                 </View>
-                                <View>
-                                    <Text>Asal</Text>
-                                    <Text>JKT</Text>
-                                    <Text>Jakarta</Text>
-                                </View>
+                            </View>
+                            <View style={{ justifyContent: 'center', alignItems: 'center', height: '15%', marginTop: 5 }}>
+                                <Text style={{ color: '#898989', fontSize: 15 }}>Berangkat</Text>
+                                <Text style={{ color: '#4e4e4e', fontSize: 15, fontWeight: 'bold' }}>Rab, 18 Des 2019</Text>
+                            </View>
+                            <View style={{ justifyContent: 'center', alignItems: 'center', height: '15%', marginTop: 9 }}>
+                                <Text style={{ color: '#898989', fontSize: 15 }}>Penumpang</Text>
+                                <Text style={{ color: '#4e4e4e', fontSize: 15, fontWeight: 'bold' }}>1 Dewasa, 0 Anak, 0 Bayi</Text>
+                            </View>
+                            <View style={{ justifyContent: 'center', alignItems: 'center', height: '15%', marginTop: 9 }}>
+                                <TouchableHighlight style={{ backgroundColor: Color.primary, justifyContent: 'center', width: '90%', height: '80%', borderRadius: 3, alignItems: 'center' }}>
+                                    <Text style={{color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Cari Tiket</Text>
+                                </TouchableHighlight>
                             </View>
                         </View>
                     </ImageBackground>
