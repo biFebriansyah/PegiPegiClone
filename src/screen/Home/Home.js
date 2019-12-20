@@ -44,7 +44,7 @@ class Home extends Component {
               navigation={this.props.navigation}
             />
             <ContentPromo/>
-            <View style={style.shado, {backgroundColor: Color.SoftDark, height: 9, marginTop: 16,}}></View>
+            <View style={style.shado, {backgroundColor: Color.SoftDark, height: 9, marginTop: 16,}} />
             <Terbang/>
             <Jelajahi/>
           </View>
