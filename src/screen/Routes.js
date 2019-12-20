@@ -6,7 +6,8 @@ import AppNavigator from '../components/Navigator/AppNavigator';
 import Login from '../components/Login/Login';
 import Splash from '../components/Splash/Splash';
 import Dtpemesan from '../components/Data Pemesan/Dtpemesan';
-import Pesawat from '../screen/Pesawat/Pesawat';
+import BandaraPlan from '../screen/BandaraPlan/BandaraPlan';
+import Pesawat from '../screen/Plane/Plane';
 import Register from '../components/Register/Register';
 
 
