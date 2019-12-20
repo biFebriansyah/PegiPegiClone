@@ -4,19 +4,9 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import configureStore from './src/utils/redux/store';
 
-import Test from './src/screen/FormData/FormData';
-
-const { store, persistor } = configureStore();
-
 class App extends Component {
   render() {
-    return (
-      <PersistGate persistor={persistor}>
-        <Provider store={store}>
-          <Routes />
-        </Provider>
-      </PersistGate>
-    );
+    return <Routes />;
   }
 }
 
