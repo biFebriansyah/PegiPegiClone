@@ -8,6 +8,10 @@ import { Button } from 'react-native-paper';
 import Color from '../../global/style/Color';
 import LoadingScreen from '../Loading/LoadingScreen';
 
+
+////asasasasas
+//////asasasasas
+
 export class Register extends Component {
 
   constructor(props) {
