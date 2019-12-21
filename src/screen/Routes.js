@@ -5,6 +5,7 @@ import Color from '../../Global/style/Color';
 
 import TiketPlan from './TiketPlan/TiketPlan';
 import AppNavigator from '../components/Navigator/AppNavigator';
+
 import Login from '../components/Login/Login';
 import Splash from '../components/Splash/Splash';
 import Dtpemesan from '../components/Data Pemesan/Dtpemesan';
@@ -17,6 +18,7 @@ import Test from './Plane/Plane';
 import Pembayaran from '../components/Pembayaran/Pembayaran';
 import DetailBayar from '../components/DetailTransfer/TransferMandiri';
 import Calendar from '../components/Calendar/Calendar';
+import FormData from '../screen/FormData/FormData';
 
 const stackApp = createStackNavigator({
 
@@ -25,6 +27,9 @@ const stackApp = createStackNavigator({
     },
     calendar: {
         screen: Calendar,
+    },
+    formdata: {
+        screen: FormData
     },
     listbandara: {
         screen: BandaraPlan,
