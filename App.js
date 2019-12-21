@@ -4,11 +4,17 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import configureStore from './src/utils/redux/store';
 
-import Profile from './src/screen/Profile/Profileee'
-
+import Profile from './src/screen/Profile/Profilee'
+const { store, persistor } = configureStore();
 class App extends Component {
   render() {
-    return <Profile />;
+    return (
+      <PersistGate persistor={persistor}>
+      <Provider store={store}>
+        <Routes />
+      </Provider>
+    </PersistGate>
+    )
   }
 }
 
