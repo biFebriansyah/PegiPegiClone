@@ -17,8 +17,8 @@ export class Profile extends Component {
 
         <Content>
 
-          <View style={{ flex: 1, justifyContent: 'center' }}>
-            <Text style={{ paddingHorizontal: 25, paddingVertical: 8, fontSize: 20, fontWeight: 'bold', }}>Daftar dan nikmati berbagai promo khusus member, sekarang!</Text>
+          <View>
+            <Text style={{ textAlign: "center", paddingHorizontal: 10, color: '#666', paddingVertical: 10, fontFamily: 'Roboto-Bold', fontSize: 20 }}>Daftar dan nikmati berbagai promo khusus member, sekarang!</Text>
           </View>
 
           <Button onPress={() => this.props.navigation.navigate('register')}
@@ -35,7 +35,7 @@ export class Profile extends Component {
           <View
             style={{ alignItems: 'center', marginTop: 25, flexDirection: 'row', paddingHorizontal: 13 }}>
             <Text style={{ color: '#a5a5a5' }}>
-              - - - - - - - - - - - - - - - - - - - - - - - {' '}
+              - - - - - - - - - - - - - - - - - - - - - {' '}
             </Text>
             <Text style={{ fontFamily: 'Roboto' }}> ATAU </Text>
             <Text style={{ color: '#a5a5a5' }}>
@@ -55,27 +55,43 @@ export class Profile extends Component {
               </Text>
             </TouchableOpacity>
           </View>
+
           <View style={style.shado, { backgroundColor: "#FAFAFA", height: 30, marginTop: 16, }}></View>
 
           <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
-            <Icons name="user-lock" style={{ width: 20, height: 20, color: "#F97432" }} />
+            <Icons name="user-lock" size={15} style={{ width: 20, height: 20, color: "#F97432" }} />
             <Text style={{ fontSize: 16, marginLeft: 6 }}> Daftar Tamu dan Penumpang  </Text>
-            <Icon name="right" size={15} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5 }} />
+            <Icon name="right" size={20} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5, marginLeft: 98 }} />
+          </View>
+
+          <View style={{ flexDirection: 'row', marginLeft: 50 }}>
+            <Text style={{ color: '#888' }}>Isi data teman perjalanan anda</Text>
           </View>
           <View style={style.shado, { backgroundColor: "#FAFAFA", height: 30, marginTop: 16, }}></View>
+
           <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
-            <Iconp name="earphones-alt" style={{ width: 20, height: 20, color: "#D8D8D8" }} />
+            <Iconp name="earphones-alt" size={15} style={{ width: 20, height: 20, color: "#D8D8D8" }} />
             <Text style={{ fontSize: 16, marginLeft: 6 }}> Pusat Bantuan  </Text>
-            <Text style={{ fontSize: 16,}}> Pusat Bantuan  </Text>
-            <Icon name="right" size={15} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5 }} />
+            <Text style={{ fontSize: 16, }}> Pusat Bantuan  </Text>
+            <Icon name="right" size={20} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5, marginLeft: 95 }} />
           </View>
+          <View style={{ flexDirection: 'row', marginLeft: 50 }}>
+            <Text style={{ color: '#888' }}>Kami siap membantu anda</Text>
+          </View>
+
           <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
-            <Icons name="newspaper" style={{ width: 20, height: 20, color: "#D8D8D8" }} />
+            <Icons name="newspaper" size={15} style={{ width: 20, height: 20, color: "#D8D8D8" }} />
             <Text style={{ fontSize: 16, marginLeft: 6 }}> Newsletter  </Text>
-            <Icon name="right" size={15} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5, }} />
+            <Icon name="right" size={20} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5, marginLeft: 240 }} />
           </View>
+          <View style={{ flexDirection: 'row', marginLeft: 50 }}>
+            <Text style={{ color: '#888' }}>Berlangganan di newsletter</Text>
+          </View>
+
           <View style={style.shado, { backgroundColor: "#FAFAFA", height: 70, marginTop: 16, }}>
-          <Text style={{ alignItems: 'center' , fontSize: 15,  }}>Version 2.10.0</Text>
+            <View style={{ alignItems: "center", flex: 1, paddingVertical: 20 }}>
+              <Text style={{ fontSize: 15, }}>Version 2.10.0</Text>
+            </View>
           </View>
         </Content>
       </>

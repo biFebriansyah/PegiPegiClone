@@ -27,7 +27,7 @@ export class BandaraPlan extends Component {
 
   async getData(data) {
     try {
-      await AsyncStorage.setItem("Asal", JSON.stringify(data))
+      await AsyncStorage.setItem("Tujuan", JSON.stringify(data))
       const { goBack } = this.props.navigation;
       goBack();
     } catch (error) {
