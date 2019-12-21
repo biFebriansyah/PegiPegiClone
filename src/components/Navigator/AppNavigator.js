@@ -9,8 +9,8 @@ import IconAntypo from 'react-native-vector-icons/Entypo';
 import Home from '../../screen/Home/Home';
 import Pesan from '../../screen/Pesan/Pesan';
 import Inbox from '../../screen/Inbox/Inbox';
-import Profile from '../../screen/Profile/Profilee';
-import Listbandara from '../ListBandara/Listbandara';
+import Profile from '../../screen/Profile/Profile';
+
 
 const Navigator = createMaterialTopTabNavigator({
 

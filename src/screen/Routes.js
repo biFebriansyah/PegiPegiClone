@@ -3,6 +3,7 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import TiketPlan from './TiketPlan/TiketPlan';
 import AppNavigator from '../components/Navigator/AppNavigator';
+
 import Login from '../components/Login/Login';
 import Splash from '../components/Splash/Splash';
 import Dtpemesan from '../components/Data Pemesan/Dtpemesan';
@@ -14,11 +15,15 @@ import Bandara2 from '../screen/BandaraPlan2/BandaraPlan';
 import Test from './Plane/Plane';
 import Pembayaran from '../components/Pembayaran/Pembayaran';
 import DetailBayar from '../components/DetailTransfer/TransferMandiri';
+import FormData from '../screen/FormData/FormData';
 
 const stackApp = createStackNavigator({
 
     tiket: {
         screen: TiketPlan,
+    },
+    formdata: {
+        screen: FormData
     },
     listbandara: {
         screen: BandaraPlan

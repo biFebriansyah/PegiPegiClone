@@ -93,7 +93,7 @@ export class Pesawat extends Component {
                 </Header>
                 <View style={{ flex: 1, backgroundColor: Color.header_second }}>
                     <ImageBackground source={require('../../../Global/asset/Image/components/pesawat.png')} style={{ flex: 1, position: 'relative' }} imageStyle={{ resizeMode: 'contain' }}>
-                        <View style={{ width: 359, height: 330, position: 'absolute', borderRadius: 10, left: 17, top: 24 }}>
+                        <View style={{ width: 359, height: 330, position: 'absolute', borderRadius: 10, left: "8%", top: '7%' }}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 10, height: 50 }}>
                                 <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Pulang Pergi</Text>
                                 <Switch
