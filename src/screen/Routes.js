@@ -6,11 +6,12 @@ import AppNavigator from '../components/Navigator/AppNavigator';
 import Login from '../components/Login/Login';
 import Splash from '../components/Splash/Splash';
 import Dtpemesan from '../components/Data Pemesan/Dtpemesan';
-import BandaraPlan from '../screen/BandaraPlan/BandaraPlan';
-import Pesawat from '../screen/Plane/Plane';
+import Pesawat from '../screen/Pesawat/Pesawat';
 import Register from '../components/Register/Register';
 import BandaraPlan from '../screen/BandaraPlan/BandaraPlan';
-
+import ListBandara from './BandaraPlan/BandaraPlan';
+import Bandara2 from '../screen/BandaraPlan2/BandaraPlan';
+import Test from './Plane/Plane';
 
 const stackApp = createStackNavigator({
 
@@ -23,14 +24,23 @@ const stackApp = createStackNavigator({
     dtpemesan: {
         screen: Dtpemesan
     },
+    bandara2: {
+        screen: Bandara2
+    },
     login: {
         screen: Login
     },
     pesawat: {
         screen: Pesawat
     },
+    listbandara: {
+        screen: ListBandara
+    },
     register: {
         screen: Register
+    },
+    test: {
+        screen: Test
     },
     navi: {
         screen: AppNavigator,

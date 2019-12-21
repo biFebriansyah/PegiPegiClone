@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Button, Dimensions } from 'react-native';
+import { Text, View, Button } from 'react-native';
 import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 
@@ -13,8 +13,8 @@ export class Pesan extends Component {
                 </Header>
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                     <Text> pesan here </Text>
-                    <Button onPress={() => this.props.navigation.navigate('tiket')} title="Press Me">
-                        test
+                    <Button onPress={() => this.props.navigation.navigate('test')} title="Press Me">
+
                     </Button>
                 </View>
             </>
