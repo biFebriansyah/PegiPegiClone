@@ -3,7 +3,7 @@ import { Text, View, Image } from 'react-native'
 import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 
-export class Profilee extends Component {
+export class Profile extends Component {
     render() {
         return (
             <>
@@ -49,4 +49,4 @@ export class Profilee extends Component {
     }
 }
 
-export default Profilee;
+export default Profile;
