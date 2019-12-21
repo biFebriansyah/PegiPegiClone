@@ -12,6 +12,8 @@ import BandaraPlan from '../screen/BandaraPlan/BandaraPlan';
 import ListBandara from './BandaraPlan/BandaraPlan';
 import Bandara2 from '../screen/BandaraPlan2/BandaraPlan';
 import Test from './Plane/Plane';
+import Pembayaran from '../components/Pembayaran/Pembayaran';
+import DetailBayar from '../components/DetailTransfer/TransferMandiri';
 
 const stackApp = createStackNavigator({
 
@@ -38,6 +40,12 @@ const stackApp = createStackNavigator({
     },
     register: {
         screen: Register
+    },
+    pembayaran: {
+        screen: Pembayaran
+    },
+    detailBayar: {
+        screen: DetailBayar
     },
     test: {
         screen: Test

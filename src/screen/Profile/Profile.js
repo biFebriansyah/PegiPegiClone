@@ -18,7 +18,7 @@ export class Profile extends Component {
         <Content>
 
           <View>
-            <Text style={{ textAlign: "center", paddingHorizontal: 10, color: '#666', paddingVertical: 10, fontFamily: 'Roboto-Bold' , fontSize: 20}}>Daftar dan nikmati berbagai promo khusus member, sekarang!</Text>
+            <Text style={{ textAlign: "center", paddingHorizontal: 10, color: '#666', paddingVertical: 10, fontFamily: 'Roboto-Bold', fontSize: 20 }}>Daftar dan nikmati berbagai promo khusus member, sekarang!</Text>
           </View>
 
           <Button onPress={() => this.props.navigation.navigate('register')}
@@ -35,7 +35,7 @@ export class Profile extends Component {
           <View
             style={{ alignItems: 'center', marginTop: 25, flexDirection: 'row', paddingHorizontal: 13 }}>
             <Text style={{ color: '#a5a5a5' }}>
-              - - - - - - - - - - - - - - - - - - - - - - - {' '}
+              - - - - - - - - - - - - - - - - - - - - - {' '}
             </Text>
             <Text style={{ fontFamily: 'Roboto' }}> ATAU </Text>
             <Text style={{ color: '#a5a5a5' }}>

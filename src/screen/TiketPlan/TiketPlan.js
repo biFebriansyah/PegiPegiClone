@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, AsyncStorage } from 'react-native';
 import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 import IconAnt from 'react-native-vector-icons/AntDesign';
@@ -10,13 +10,61 @@ export class TiketPlan extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      asal: {
+        code: 'PLW',
+        city: 'Palu'
+      },
+      tujuan: {
+        code: 'JKT',
+        city: 'Jakarta'
+      }
+    };
     this.goBack = this.goBack.bind(this);
+    this.tiketOnPress = this.tiketOnPress.bind(this);
+
+  }
+
+  tiketOnPress() {
+    this.props.navigation.navigate('pembayaran')
   }
 
   goBack() {
     const { goBack } = this.props.navigation;
     goBack();
+  }
+
+  componentWillUnmount() {
+    this.subs.forEach(sub => sub.remove());
+  }
+
+  componentDidMount() {
+    this.subs = [
+      this.props.navigation.addListener("didFocus", () => {
+        // this.setState({ isFocused: true })
+        this._retriveData()
+      }),
+      this.props.navigation.addListener("willBlur", () => {
+        this.setState({ isFocused: false })
+      })
+    ];
+  }
+
+  async _retriveData() {
+    try {
+      const valueAsal = await AsyncStorage.getItem('Asal');
+      const valueTujuan = await AsyncStorage.getItem('Tujuan');
+      if (valueAsal) {
+        const dataValue = JSON.parse(valueAsal)
+        this.setState({ asal: dataValue })
+      }
+      if (valueTujuan) {
+        const dataValue = JSON.parse(valueTujuan)
+        this.setState({ tujuan: dataValue })
+      }
+    } catch (error) {
+      console.warn(error)
+    }
   }
 
   render() {
@@ -32,7 +80,7 @@ export class TiketPlan extends Component {
         </Header>
 
         <View style={{ flex: 1, alignItems: 'center' }}>
-          <TicketCard />
+          <TicketCard asal={this.state.asal.code} tujuan={this.state.tujuan.code} press={this.tiketOnPress} />
         </View>
       </>
     );
