@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet,TouchableHighlight, Dimensions, Image } from 'react-native';
+import { Text, View, StyleSheet, TouchableHighlight, Dimensions } from 'react-native';
 import IconEntypo from 'react-native-vector-icons/AntDesign';
 import Icontypo from 'react-native-vector-icons/Entypo';
 import { Header, Content, } from 'native-base';
@@ -12,7 +12,17 @@ import Icond from 'react-native-vector-icons/Feather';
 import Color from '../../../Global/style/Color';
 import { BoxShadow } from 'react-native-shadow';
 export class FormData extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+
+    }
+
+  }
+
   render() {
+    const { navigate } = this.props.navigation
     return (
       <>
         <View>
@@ -39,15 +49,15 @@ export class FormData extends Component {
             <Text style={{ fontSize: 16, marginLeft: 6 }}>Jakarta </Text>
             <Text style={{ fontSize: 16, marginLeft: 6 }}>-></Text>
             <Text style={{ fontSize: 16, marginLeft: 6 }}>Surabaya </Text>
-            <Text style={{ color:"#F97432",paddingVertical: 5, marginLeft: 160,fontWeight:"bold",fontSize:15 }} >Detail</Text>
+            <Text style={{ color: "#F97432", paddingVertical: 5, marginLeft: 160, fontWeight: "bold", fontSize: 15 }} >Detail</Text>
           </View>
           <View style={{ flexDirection: 'row', marginLeft: 50 }}>
             <Text style={{ color: '#888' }}>Sekali Jalan</Text>
           </View>
-          <View style={{ alignItems: "center",}}>
-              <Text style={{ fontSize: 15, color:"#a5a5a5"}}>- - - - - - - - - - - - - - - - - - -
+          <View style={{ alignItems: "center", }}>
+            <Text style={{ fontSize: 15, color: "#a5a5a5" }}>- - - - - - - - - - - - - - - - - - -
                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</Text>
-            </View>
+          </View>
           <View style={{ marginTop: 10, marginLeft: 20, flexDirection: 'row' }}>
             <Icons name="user-lock" size={15} style={{ width: 20, height: 20, color: "#F97432" }} />
             <Text style={{ fontSize: 16, marginLeft: 6 }}>Lion Air </Text>
@@ -105,31 +115,35 @@ export class FormData extends Component {
           <View style={style.shado, { backgroundColor: "#FAFAFA", height: 30 }}>
 
           </View>
-          <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
-            <Icons name="user-edit" size={15} style={{ width: 20, height: 20, color: "#D8D8D8" }} />
-            <Text style={{ fontSize: 16, marginLeft: 8 }}>M Fadel Pratama</Text>
-            <Icon name="right" size={20} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5, marginLeft: 200 }} />
-          </View>
+          <TouchableHighlight onPress={() => navigate('orderData')}>
+            <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
+              <Icons name="user-edit" size={15} style={{ width: 20, height: 20, color: "#D8D8D8" }} />
+              <Text style={{ fontSize: 16, marginLeft: 8 }}>M Fadel Pratama</Text>
+              <Icon name="right" size={20} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5, marginLeft: 200 }} />
+            </View>
+          </TouchableHighlight>
           <View style={style.shado, { backgroundColor: "#FAFAFA", height: 70, marginTop: 16, }}>
-          <View style={{ flex: 1, paddingVertical: 20 }}>
+            <View style={{ flex: 1, paddingVertical: 20 }}>
               <Text style={{ paddingHorizontal: 20, fontSize: 15, }}>Data Penumpang</Text>
             </View>
           </View>
-          <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
-            <Icons name="user-edit" size={15} style={{ width: 20, height: 20, color: "#D8D8D8" }} />
-            <Text style={{ fontSize: 16, marginLeft: 8 }}>Isi data penumpang 1</Text>
-            <Icon name="right" size={20} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5, marginLeft: 170 }} />
-          </View>
+          <TouchableHighlight onPress={() => navigate('pessanger')}>
+            <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
+              <Icons name="user-edit" size={15} style={{ width: 20, height: 20, color: "#D8D8D8" }} />
+              <Text style={{ fontSize: 16, marginLeft: 8 }}>Isi data penumpang 1</Text>
+              <Icon name="right" size={20} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5, marginLeft: 170 }} />
+            </View>
+          </TouchableHighlight>
           <View style={{ flexDirection: 'row', marginLeft: 50 }}>
             <Text style={{ color: '#888' }}>Dewasa</Text>
           </View>
-           <View style={style.shado, { backgroundColor: "#FAFAFA", height: 70, marginTop: 16, }}>
-          <View style={{ flex: 1, paddingVertical: 20 }}>
+          <View style={style.shado, { backgroundColor: "#FAFAFA", height: 70, marginTop: 16, }}>
+            <View style={{ flex: 1, paddingVertical: 20 }}>
               <Text style={{ paddingHorizontal: 20, fontSize: 15, }}>Klaim instan : mudah, cepat dan otomatis</Text>
             </View>
             <View style={{ flexDirection: 'row', marginLeft: 22 }}>
-            <Text style={{ color: '#888' }}>Asuransi Simas Insurtech-Pasar polis </Text>
-          </View>
+              <Text style={{ color: '#888' }}>Asuransi Simas Insurtech-Pasar polis </Text>
+            </View>
           </View>
 
           <TouchableHighlight onPress={this.handleOnpress}>
@@ -198,27 +212,26 @@ export class FormData extends Component {
             </BoxShadow>
           </TouchableHighlight>
           <View style={style.shado, { backgroundColor: "#FAFAFA", height: 70, marginTop: 16, }}>
-          <View style={{ flex: 1, paddingVertical: 20 }}>
-              <Text style={{ paddingHorizontal: 20, fontSize: 15,color: "#F97432" ,fontWeight:"bold"  }}>Rp.19.000</Text>
+            <View style={{ flex: 1, paddingVertical: 20 }}>
+              <Text style={{ paddingHorizontal: 20, fontSize: 15, color: "#F97432", fontWeight: "bold" }}>Rp.19.000</Text>
             </View>
           </View>
-          <View style={style.shado,{ alignItems:"center",  backgroundColor: "#FAFAFA", height: 70, marginTop: 16, }}>
-          <View style={{ flex: 1, paddingVertical: 20, }}>
-         
-          <Button onPress={this.loginSubmit}
-              style={{
-                
-                backgroundColor: Color.primary,
-                alignItems: 'center',
-                marginTop: 5,
-                borderRadius: 2,
-                width: "100%",
-                paddingHorizontal:140,
-              }}>
-              <Text style={{ color: 'white' }}> Lanjut </Text>
-            </Button>
+          <View style={style.shado, { alignItems: "center", backgroundColor: "#FAFAFA", height: 70, marginTop: 16, }}>
+            <View style={{ flex: 1, paddingVertical: 20, }}>
+
+              <Button onPress={() => navigate('pembayaran')}
+                style={{
+                  backgroundColor: Color.primary,
+                  alignItems: 'center',
+                  marginTop: 5,
+                  borderRadius: 2,
+                  width: "100%",
+                  paddingHorizontal: 140,
+                }}>
+                <Text style={{ color: 'white' }}> Lanjut </Text>
+              </Button>
             </View>
-            </View>
+          </View>
         </Content>
 
       </>

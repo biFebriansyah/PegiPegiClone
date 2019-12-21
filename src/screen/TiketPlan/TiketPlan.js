@@ -26,7 +26,7 @@ export class TiketPlan extends Component {
   }
 
   tiketOnPress() {
-    this.props.navigation.navigate('pembayaran')
+    this.props.navigation.navigate('formdata')
   }
 
   goBack() {

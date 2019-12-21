@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Dimensions, ScrollView, Image } from 'react-native';
+import { Text, View, StyleSheet, Dimensions, ScrollView, Image, TouchableHighlight } from 'react-native';
 import { Header, Content } from 'native-base';
 import Color from '../../global/style/Color';
 import IconAnt from 'react-native-vector-icons/AntDesign';
@@ -64,14 +64,16 @@ export class Pembayaran extends Component {
                             <Text style={{ fontFamily: 'Roboto-Bold', color: "#999", fontSize: 20 }}>
                                 Transfer Bank
                         </Text>
-                            <BoxShadow setting={shadowOpt}>
-                                <View style={{ flex: 1 }}>
-                                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#fff', height: 49, paddingLeft: 10, marginVertical: 5, borderRadius: 5, borderBottomEndRadius: 0, borderBottomStartRadius: 0, }}>
-                                        <Text style={{ top: 15 }}>Bank Mandiri</Text>
-                                        <Image source={require('../../../Global/asset/Image/components/Mandiri.png')} style={{ left: 70, top: 15, width: 20, height: 20, flex: 1, resizeMode: 'contain' }} />
+                            <TouchableHighlight onPress={this.handleOnpress}>
+                                <BoxShadow setting={shadowOpt}>
+                                    <View style={{ flex: 1 }}>
+                                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#fff', height: 49, paddingLeft: 10, marginVertical: 5, borderRadius: 5, borderBottomEndRadius: 0, borderBottomStartRadius: 0, }}>
+                                            <Text style={{ top: 15 }}>Bank Mandiri</Text>
+                                            <Image source={require('../../../Global/asset/Image/components/Mandiri.png')} style={{ left: 70, top: 15, width: 20, height: 20, flex: 1, resizeMode: 'contain' }} />
+                                        </View>
                                     </View>
-                                </View>
-                            </BoxShadow>
+                                </BoxShadow>
+                            </TouchableHighlight>
                             <BoxShadow setting={shadowOpttt}>
                                 <View style={{ flex: 1 }}>
                                     <View style={{ flexDirection: 'row', backgroundColor: '#fff', height: 49, paddingLeft: 10, marginVertical: 0, borderRadius: 0, justifyContent: 'center' }}>

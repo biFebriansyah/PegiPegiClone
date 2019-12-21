@@ -34,10 +34,10 @@ export class Dtpemesan extends Component {
   changeColorBlur(name) {
 
     if (name === 'nama pemesan') {
-        if (!this.state.username) {
-          this.setState({ colorUsername: "#bbb" })
-        }
+      if (!this.state.username) {
+        this.setState({ colorUsername: "#bbb" })
       }
+    }
     if (name === 'nomor telepon') {
       if (!this.state.username) {
         this.setState({ colorUsername: "#bbb" })
@@ -76,25 +76,25 @@ export class Dtpemesan extends Component {
         </Header>
 
         <Content>
-            <View
-           
-              style={{
-                backgroundColor: "#898989",
-                width: "100%",
-                paddingVertical: 19,
-                paddingHorizontal:15,
-                flexDirection:"row",
-                alignItems:"center"
+          <View
 
-              }}> 
-              <View >
-              <Icons name="exclamationcircleo" size={18} color="white"  />
-              </View>
-              <View style={{flex:1, marginLeft:20}} >
-              <Text style={{color: 'white' ,fontSize: 13}}>Semua informasi terkait pemesanan ini akan dikirimkan ke kontak berikut </Text>
+            style={{
+              backgroundColor: "#898989",
+              width: "100%",
+              paddingVertical: 19,
+              paddingHorizontal: 15,
+              flexDirection: "row",
+              alignItems: "center"
+
+            }}>
+            <View >
+              <Icons name="exclamationcircleo" size={18} color="white" />
             </View>
-            
+            <View style={{ flex: 1, marginLeft: 20 }} >
+              <Text style={{ color: 'white', fontSize: 13 }}>Semua informasi terkait pemesanan ini akan dikirimkan ke kontak berikut </Text>
             </View>
+
+          </View>
           <View style={{ paddingHorizontal: 20 }}>
             <Item floatingLabel style={{ marginTop: 18, borderColor: this.state.colorUsername }}>
               <Label style={{ color: this.state.colorUsername, fontSize: 12 }}>Nama pemesan</Label>
@@ -137,7 +137,7 @@ export class Dtpemesan extends Component {
               <Text style={{ color: 'white' }}> Simpan </Text>
             </Button>
           </View>
-        
+
         </Content>
       </>
     );
