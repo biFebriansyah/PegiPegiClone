@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, TouchableHighlight } from 'react-native'
+import { Text, View, TouchableHighlight,Image } from 'react-native'
 import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 
@@ -13,11 +13,8 @@ export class Inbox extends Component {
                     <Text style={{ color: '#FFF', fontSize: 20, fontWeight: 'bold' }}>Inbox</Text>
                 </Header>
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                    <Text> Inbox Here </Text>
-                    <TouchableHighlight activeOpacity={1} underlayColor='blue' style={{ backgroundColor: 'blue' }} onPress={() => console.log("Masuk")}>
-                        <Text>Press here</Text>
-                    </TouchableHighlight>
-                </View>
+                <Image source={require('../../../Global/asset/Image/components/121.png')} style={{ width: '100%', height: '200%', resizeMode: 'contain', }} />
+            </View>
             </>
         )
     }
