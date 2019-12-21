@@ -1,5 +1,7 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { connect } from 'react-redux';
+import Color from '../../Global/style/Color';
 
 import TiketPlan from './TiketPlan/TiketPlan';
 import AppNavigator from '../components/Navigator/AppNavigator';
@@ -14,14 +16,18 @@ import Bandara2 from '../screen/BandaraPlan2/BandaraPlan';
 import Test from './Plane/Plane';
 import Pembayaran from '../components/Pembayaran/Pembayaran';
 import DetailBayar from '../components/DetailTransfer/TransferMandiri';
+import Calendar from '../components/Calendar/Calendar';
 
 const stackApp = createStackNavigator({
 
     tiket: {
         screen: TiketPlan,
     },
+    calendar: {
+        screen: Calendar,
+    },
     listbandara: {
-        screen: BandaraPlan
+        screen: BandaraPlan,
     },
     dtpemesan: {
         screen: Dtpemesan
@@ -33,7 +39,10 @@ const stackApp = createStackNavigator({
         screen: Login
     },
     pesawat: {
-        screen: Pesawat
+        screen: Pesawat,
+        navigationOptions: {
+            header: null
+        }
     },
     listbandara: {
         screen: ListBandara
@@ -60,6 +69,7 @@ const stackApp = createStackNavigator({
 }, {
     initialRouteName: 'navi',
     headerMode: 'none'
+
 })
 
 const Routes = createAppContainer(createSwitchNavigator({
@@ -68,12 +78,11 @@ const Routes = createAppContainer(createSwitchNavigator({
     },
     Splash: {
         screen: Splash,
-        navigationOptions: {
-
-        }
     }
 }, {
     initialRouteName: 'Splash'
 }))
+
+
 
 export default Routes

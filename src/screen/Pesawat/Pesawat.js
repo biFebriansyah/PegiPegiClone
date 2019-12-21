@@ -4,6 +4,7 @@ import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 import IconAnt from 'react-native-vector-icons/AntDesign';
 
+
 export class Pesawat extends Component {
 
     constructor(props) {
@@ -93,7 +94,7 @@ export class Pesawat extends Component {
                 </Header>
                 <View style={{ flex: 1, backgroundColor: Color.header_second }}>
                     <ImageBackground source={require('../../../Global/asset/Image/components/pesawat.png')} style={{ flex: 1, position: 'relative' }} imageStyle={{ resizeMode: 'contain' }}>
-                        <View style={{ width: 359, height: 330, position: 'absolute', borderRadius: 10, left: 17, top: 24 }}>
+                        <View style={{ width: 359, height: 330, position: 'absolute', borderRadius: 10, left: 17, top: 24, }}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 10, height: 50 }}>
                                 <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Pulang Pergi</Text>
                                 <Switch
@@ -126,10 +127,12 @@ export class Pesawat extends Component {
                                     </View>
                                 </TouchableHighlight>
                             </View>
-                            <View style={{ justifyContent: 'center', alignItems: 'center', height: '15%', marginTop: 5 }}>
-                                <Text style={{ color: '#898989', fontSize: 15 }}>Berangkat</Text>
-                                <Text style={{ color: '#4e4e4e', fontSize: 15, fontWeight: 'bold' }}>Rab, 18 Des 2019</Text>
-                            </View>
+                            <TouchableHighlight underlayColor='white' onPress={() => this.props.navigation.navigate('calendar')}>
+                                <View style={{ justifyContent: 'center', alignItems: 'center', height: '15%', marginTop: 5 }}>
+                                    <Text style={{ color: '#898989', fontSize: 15 }}>Berangkat</Text>
+                                    <Text style={{ color: '#4e4e4e', fontSize: 15, fontWeight: 'bold' }}>Rab, 18 Des 2019</Text>
+                                </View>
+                            </TouchableHighlight>
                             <View style={{ justifyContent: 'center', alignItems: 'center', height: '15%', marginTop: 9 }}>
                                 <Text style={{ color: '#898989', fontSize: 15 }}>Penumpang</Text>
                                 <Text style={{ color: '#4e4e4e', fontSize: 15, fontWeight: 'bold' }}>1 Dewasa, 0 Anak, 0 Bayi</Text>
