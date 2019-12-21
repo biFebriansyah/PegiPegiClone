@@ -10,7 +10,6 @@ import Home from '../../screen/Home/Home';
 import Pesan from '../../screen/Pesan/Pesan';
 import Inbox from '../../screen/Inbox/Inbox';
 import Profile from '../../screen/Profile/Profile';
-import Listbandara from '../ListBandara/Listbandara';
 
 const Navigator = createMaterialTopTabNavigator({
 
