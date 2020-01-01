@@ -13,9 +13,6 @@ export class Pesan extends Component {
                 </Header>
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                     <Text> pesan here </Text>
-                    <Button onPress={() => this.props.navigation.navigate('test')} title="Press Me">
-
-                    </Button>
                 </View>
             </>
         )

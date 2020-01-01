@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, Image, Dimensions, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Content } from 'native-base';
 
 export class Listbandara extends Component {
 

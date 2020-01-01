@@ -49,7 +49,7 @@ export class FormData extends Component {
             <Text style={{ fontSize: 16, marginLeft: 6 }}>Jakarta </Text>
             <Text style={{ fontSize: 16, marginLeft: 6 }}>-></Text>
             <Text style={{ fontSize: 16, marginLeft: 6 }}>Surabaya </Text>
-            <Text style={{ color: "#F97432", paddingVertical: 5, marginLeft: 160, fontWeight: "bold", fontSize: 15 }} >Detail</Text>
+            <Text style={{ color: "#F97432", paddingVertical: 5, fontWeight: "bold", fontSize: 15, }} >Detail</Text>
           </View>
           <View style={{ flexDirection: 'row', marginLeft: 50 }}>
             <Text style={{ color: '#888' }}>Sekali Jalan</Text>
@@ -118,7 +118,7 @@ export class FormData extends Component {
           <TouchableHighlight onPress={() => navigate('orderData')}>
             <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
               <Icons name="user-edit" size={15} style={{ width: 20, height: 20, color: "#D8D8D8" }} />
-              <Text style={{ fontSize: 16, marginLeft: 8 }}>M Fadel Pratama</Text>
+              <Text style={{ fontSize: 16, marginLeft: 8 }}>Isi data pemesanan</Text>
               <Icon name="right" size={20} color="#F97432" onPress={this.goBack} style={{ paddingVertical: 5, marginLeft: 200 }} />
             </View>
           </TouchableHighlight>
