@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, AsyncStorage } from 'react-native';
+import { Text, View, StyleSheet, } from 'react-native';
 import { Header } from 'native-base';
 import Color from '../../global/style/Color';
 import IconAnt from 'react-native-vector-icons/AntDesign';
 import TicketCard from '../../components/TiketCard/TiketCard';
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 export class TiketPlan extends Component {

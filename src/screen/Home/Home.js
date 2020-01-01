@@ -12,7 +12,7 @@ import Jelajahi from '../../components/JelajahiNusantara/Jelajahi';
 import { connect } from 'react-redux';
 
 class Home extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -22,31 +22,27 @@ class Home extends Component {
     };
   }
 
-  componentDidMount () {
-      console.log(this.props.data)
-  }
-
-    render () {
+  render() {
     return (
       <>
-        <StatusBar backgroundColor={Color.primary}/>
+        <StatusBar backgroundColor={Color.primary} />
         <Header androidStatusBarColor={Color.primary}
-                style={style.shado, {backgroundColor: Color.lightAcent, alignItems: 'center', justifyContent: 'space-between'}}>
-          <View style={{width: 120, height: 44}}>
+          style={style.shado, { backgroundColor: Color.lightAcent, alignItems: 'center', justifyContent: 'space-between' }}>
+          <View style={{ width: 120, height: 44 }}>
             <Image source={require('../../global/asset/logo.png')}
-                   style={{width: '100%', height: '100%', resizeMode: 'contain', flex: 1}}/>
+              style={{ width: '100%', height: '100%', resizeMode: 'contain', flex: 1 }} />
           </View>
-          <IconMaterial name='person-outline' size={24} color={Color.primary} onPress={() => this.props.navigation.navigate('login')}/>
+          <IconMaterial name='person-outline' size={24} color={Color.primary} onPress={() => this.props.navigation.navigate('login')} />
         </Header>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <View style={{flex: 1}}>
+          <View style={{ flex: 1 }}>
             <IconHero
               navigation={this.props.navigation}
             />
-            <ContentPromo/>
-            <View style={style.shado, {backgroundColor: Color.SoftDark, height: 9, marginTop: 16,}} />
-            <Terbang/>
-            <Jelajahi/>
+            <ContentPromo />
+            <View style={style.shado, { backgroundColor: Color.SoftDark, height: 9, marginTop: 16, }} />
+            <Terbang />
+            <Jelajahi />
           </View>
         </ScrollView>
       </>
@@ -69,7 +65,7 @@ const style = StyleSheet.create({
     color: '#fff',
     fontWeight: '600',
     textShadowColor: '#000',
-    textShadowOffset: {width: -1, height: 1},
+    textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 10,
     fontFamily: 'Roboto-Bolditalic',
     fontSize: 16,

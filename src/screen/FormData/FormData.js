@@ -46,17 +46,17 @@ export class FormData extends Component {
 
           <View style={{ marginTop: 20, marginLeft: 20, flexDirection: 'row' }}>
             <Icons name="user-lock" size={15} style={{ width: 20, height: 20, color: "#F97432" }} />
-            <Text style={{ fontSize: 16, marginLeft: 6 }}>Jakarta </Text>
+            <Text style={{ fontSize: 16, marginLeft: 6, }}>Jakarta </Text>
             <Text style={{ fontSize: 16, marginLeft: 6 }}>-></Text>
             <Text style={{ fontSize: 16, marginLeft: 6 }}>Surabaya </Text>
-            <Text style={{ color: "#F97432", paddingVertical: 5, fontWeight: "bold", fontSize: 15, }} >Detail</Text>
+            <Text style={style.textDetail} >Detail</Text>
           </View>
           <View style={{ flexDirection: 'row', marginLeft: 50 }}>
             <Text style={{ color: '#888' }}>Sekali Jalan</Text>
           </View>
           <View style={{ alignItems: "center", }}>
             <Text style={{ fontSize: 15, color: "#a5a5a5" }}>- - - - - - - - - - - - - - - - - - -
-               - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</Text>
+               - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</Text>
           </View>
           <View style={{ marginTop: 10, marginLeft: 20, flexDirection: 'row' }}>
             <Icons name="user-lock" size={15} style={{ width: 20, height: 20, color: "#F97432" }} />
@@ -262,6 +262,15 @@ const style = StyleSheet.create({
     right: 0,
     marginRight: 10,
   },
+  textDetail: {
+    position: 'absolute',
+    right: 0,
+    marginRight: 20,
+    color: "#F97432",
+    paddingVertical: 5,
+    fontWeight: "bold",
+    fontSize: 15,
+  }
 })
 
 export default FormData

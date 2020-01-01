@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, AsyncStorage } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { View, Header, Item, Input, Text } from 'native-base';
 import Color from '../../global/style/Color';
 import IconAnt from 'react-native-vector-icons/AntDesign';
@@ -7,6 +7,7 @@ import IconSe from 'react-native-vector-icons/Feather';
 import Listbandara from '../../components/ListBandara/Listbandara';
 import { get } from '../../utils/axios';
 import { Content } from 'native-base';
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 export class BandaraPlan extends Component {

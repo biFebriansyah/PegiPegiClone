@@ -21,18 +21,18 @@ export class Pesawat extends Component {
                 code: 'JKT',
                 city: 'Jakarta'
             },
-            pp: ''
+            pp: '',
+            date: ''
         };
-        this.onDateChange = this.onDateChange.bind(this);
         this.goBack = this.goBack.bind(this);
 
 
     }
 
     componentDidMount() {
+        this.setDate()
         this.subs = [
             this.props.navigation.addListener("didFocus", () => {
-                // this.setState({ isFocused: true })
                 this._retriveData()
             }),
             this.props.navigation.addListener("willBlur", () => {
@@ -50,6 +50,7 @@ export class Pesawat extends Component {
         try {
             const valueAsal = await AsyncStorage.getItem('Asal');
             const valueTujuan = await AsyncStorage.getItem('Tujuan');
+            const valueDate = await AsyncStorage.getItem('date');
             if (valueAsal) {
                 const dataValue = JSON.parse(valueAsal)
                 this.setState({ asal: dataValue })
@@ -57,6 +58,9 @@ export class Pesawat extends Component {
             if (valueTujuan) {
                 const dataValue = JSON.parse(valueTujuan)
                 this.setState({ tujuan: dataValue })
+            }
+            if (valueDate) {
+                this.setState({ date: valueDate })
             }
         } catch (error) {
             console.warn(error)
@@ -68,18 +72,17 @@ export class Pesawat extends Component {
         goBack();
     }
 
-    onDateChange(date, type) {
-        if (type === 'END_DATE') {
-            this.setState({
-                calendarReturn: date,
-            });
-        } else {
-            this.setState({
-                calendarDeparture: date,
-                calendarReturn: null,
-            });
-        }
+    setDate = () => {
+        const hariList = ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab']
+        const bulanList = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nob', 'Des']
+        const date = new Date().getDate()
+        const day = new Date().getDay()
+        const Month = new Date().getMonth()
+        const Year = new Date().getFullYear()
+        const newDate = hariList[day] + ', ' + date + ' ' + bulanList[Month] + ' ' + Year
+        this.setState({ date: newDate })
     }
+
 
     render() {
         return (
@@ -123,7 +126,7 @@ export class Pesawat extends Component {
                             <TouchableHighlight underlayColor='white' onPress={() => this.props.navigation.navigate('calendar')} style={{ height: '15%', marginTop: 5 }}>
                                 <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}>
                                     <Text style={{ color: '#898989', fontSize: 15 }}>Berangkat</Text>
-                                    <Text style={{ color: '#4e4e4e', fontSize: 15, fontWeight: 'bold' }}>Rab, 18 Des 2019</Text>
+                                    <Text style={{ color: '#4e4e4e', fontSize: 15, fontWeight: 'bold' }}>{this.state.date}</Text>
                                 </View>
                             </TouchableHighlight>
                             <View style={{ justifyContent: 'center', alignItems: 'center', height: '15%', marginTop: 7 }}>

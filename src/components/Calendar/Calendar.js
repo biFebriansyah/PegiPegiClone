@@ -4,7 +4,7 @@ import { CalendarList, LocaleConfig } from 'react-native-calendars';
 import Color from '../../../Global/style/Color';
 import { Header } from 'native-base';
 import IconAnt from 'react-native-vector-icons/AntDesign';
-import moment from 'moment';
+import AsyncStorage from '@react-native-community/async-storage'
 
 export class Calendar extends Component {
     constructor(props) {
@@ -18,16 +18,27 @@ export class Calendar extends Component {
     }
 
     CalendarOnPress(day) {
-        const dt = moment(day.dateString, "YYYY-MM-DD")
-        const days = dt.format("dddd")
-        const month = dt.format("MMMM")
-        const year = dt.format("YYYY")
-        const date = days + month
-        console.log(date)
+        const hariList = ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab']
+        const bulanList = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nob', 'Des']
+        const date = new Date(day.dateString)
+        const hari = hariList[date.getDay()]
+        const bulan = bulanList[date.getMonth()]
+        const tahun = day.year
+        const newDate = hari + ', ' + day.day + ' ' + bulan + ' ' + tahun
+        this.setData(newDate)
+    }
+
+    async setData(data) {
+        try {
+            await AsyncStorage.setItem("date", data)
+            const { goBack } = this.props.navigation;
+            goBack();
+        } catch (error) {
+            console.warn(error)
+        }
     }
 
     goBack() {
-
         const { goBack } = this.props.navigation;
         goBack();
     }
@@ -36,8 +47,8 @@ export class Calendar extends Component {
         LocaleConfig.locales['fr'] = {
             monthNames: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
             monthNamesShort: ['Janv.', 'Févr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'],
-            dayNames: ['Senin', 'Selasa', 'Rabu', 'Kamis', "Jum'at", 'Sabtu', 'Minggu'],
-            dayNamesShort: ['Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab', 'Min'],
+            dayNames: ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', "Jum'at", 'Sabtu'],
+            dayNamesShort: ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'],
             today: 'Aujourd\'hui'
         };
         LocaleConfig.defaultLocale = 'fr';
