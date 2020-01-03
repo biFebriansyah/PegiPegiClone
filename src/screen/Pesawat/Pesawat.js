@@ -96,18 +96,25 @@ export class Pesawat extends Component {
                     </Text>
                 </Header>
                 <View style={{ flex: 1, backgroundColor: Color.header_second }}>
-                    <ImageBackground source={require('../../../Global/asset/Image/components/pesawat.png')} style={{ flex: 1, position: 'relative' }} imageStyle={{ resizeMode: 'contain' }}>
-                        <View style={{ width: wp('91.2%'), height: hp('42.7%'), position: 'absolute', borderRadius: 5, left: '4.3%', top: '3.4%', }}>
-                            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 10, height: 50, }}>
+                    <ImageBackground source={require('../../../Global/asset/Image/components/pesawat.png')} style={{ width: wp('100%'), height: hp('100%'), position: 'relative' }} imageStyle={{ resizeMode: 'contain' }}>
+                        <View style={{ width: wp('92%'), height: hp('42.7%'), position: 'absolute', borderRadius: 5, left: wp('4%'), top: hp('6.6%'), }}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 10, height: '17.1%', }}>
                                 <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Pulang Pergi</Text>
                                 <Switch
                                     trackColor={{
                                         true: Color.status_second,
                                     }}
                                     thumbColor={Color.status_second}
+                                    value={this.state.pp}
+                                    onValueChange={
+                                        value => {
+                                            this.setState({
+                                                pp: value,
+                                            });
+                                        }}
                                 />
                             </View>
-                            <View style={{ height: '26%', marginTop: 9, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 60, }}>
+                            <View style={{ height: '26%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 60, }}>
                                 <TouchableHighlight underlayColor='white' onPress={() => this.props.navigation.navigate('listbandara')} style={{ width: '30%' }}>
                                     <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1, }}>
                                         <Text style={{ color: '#898989', fontSize: 15 }}>Asal</Text>

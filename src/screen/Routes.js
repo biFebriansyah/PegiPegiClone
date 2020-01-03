@@ -76,7 +76,7 @@ const stackApp = createStackNavigator({
 
 }, {
     initialRouteName: 'navi',
-    headerMode: 'none'
+    headerMode: 'none',
 
 })
 
